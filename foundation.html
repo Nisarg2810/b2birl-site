@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Canada Plan | B2B IRL</title>
+<meta name="description" content="How B2B IRL brings B2B marketing events to Canada: a dinner series, city chapters, hands-on workshops and Homecoming. Formats, sponsors, economics and rollout.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+  /* page-specific components for /foundation */
+  main [id]{ scroll-margin-top: 90px; }
+
+  .toc{ display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: clamp(1.6rem, 1.2rem + 1.5vw, 2.4rem); position: relative; z-index: 1; }
+  .toc a{ text-decoration: none; }
+
+  .post{ margin-top: clamp(1.8rem, 1.4rem + 1.5vw, 2.6rem); max-width: 640px; background: var(--paper-2); border: 1px solid var(--line); border-radius: 6px; padding: 1.4rem 1.5rem 1.2rem; position: relative; transform: rotate(-0.8deg); box-shadow: 0 18px 34px -22px rgba(33,29,22,0.35); z-index: 1; }
+  .post .pin{ top: -7px; left: 36px; }
+  .post blockquote{ margin: 0; font-family: var(--font-display); font-weight: 800; font-size: var(--fs-500); line-height: 1.05; }
+  .post cite{ display: block; margin-top: 0.9rem; font-style: normal; font-family: var(--font-mono); font-size: var(--fs-000); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); }
+  .post .note{ position: absolute; right: -8px; bottom: -38px; font-family: var(--font-hand); font-size: 1.35rem; color: var(--pen); transform: rotate(-3deg); white-space: nowrap; }
+
+  .prose{ max-width: var(--measure); }
+  .prose p{ color: var(--ink-soft); font-size: var(--fs-300); }
+  .prose p + p{ margin-top: 1rem; }
+  .prose strong{ color: var(--ink); font-weight: 600; }
+
+  .ladder{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; align-items: end; margin-top: clamp(2rem, 1.6rem + 1.5vw, 2.8rem); }
+  .rung{ background: var(--paper); border: 1px solid var(--line); border-top: 3px solid var(--ink); padding: 1.1rem 1.1rem 1.2rem; position: relative; }
+  .rung:nth-child(1){ min-height: 190px; }
+  .rung:nth-child(2){ min-height: 240px; }
+  .rung:nth-child(3){ min-height: 290px; }
+  .rung:nth-child(4){ min-height: 340px; border-top-color: var(--accent); background: var(--paper-2); }
+  .rung .step{ font-family: var(--font-mono); font-size: var(--fs-000); letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); display: block; }
+  .rung h3{ font-size: var(--fs-500); margin: 0.5rem 0 0.4rem; }
+  .rung .role{ font-family: var(--font-mono); font-size: var(--fs-100); text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 0.6rem; }
+  .rung p{ color: var(--ink-soft); font-size: var(--fs-200); }
+  .rung a{ position: absolute; inset: 0; }
+
+  .table-wrap{ overflow-x: auto; border: 1px solid var(--line); background: var(--paper); -webkit-overflow-scrolling: touch; }
+  table.grid{ border-collapse: collapse; width: 100%; min-width: 760px; font-size: var(--fs-200); }
+  table.grid th, table.grid td{ text-align: left; vertical-align: top; padding: 0.8rem 0.9rem; border-bottom: 1px solid var(--line); }
+  table.grid thead th{ font-family: var(--font-mono); font-size: var(--fs-000); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; background: var(--paper-2); }
+  table.grid tbody th{ font-family: var(--font-display); font-weight: 800; font-size: var(--fs-300); white-space: nowrap; }
+  table.grid tbody tr:last-child th, table.grid tbody tr:last-child td{ border-bottom: none; }
+  table.grid td small{ display: block; color: var(--ink-soft); font-size: var(--fs-100); margin-top: 0.2rem; }
+  table.grid.fit td{ text-align: center; }
+  table.grid.fit{ min-width: 1040px; }
+  table.grid.fit td.why{ min-width: 280px; text-align: left; color: var(--ink-soft); font-size: var(--fs-100); }
+  .table-note{ font-family: var(--font-mono); font-size: var(--fs-000); color: var(--ink-soft); letter-spacing: 0.03em; margin-top: 0.7rem; }
+
+  .mk{ display: inline-block; font-family: var(--font-mono); font-size: var(--fs-000); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.25em 0.6em; border-radius: 999px; white-space: nowrap; }
+  .mk.yes{ background: var(--highlight); color: #1B1208; }
+  .mk.best{ background: var(--ink); color: var(--paper); }
+  .mk.lim{ border: 1px solid var(--line); color: var(--ink-soft); }
+  .mk.no{ border: 1px solid var(--accent); color: var(--accent); }
+
+  .format-head{ display: grid; grid-template-columns: auto 1fr; gap: clamp(1rem, 0.6rem + 2vw, 2.4rem); align-items: end; margin-bottom: clamp(1.6rem, 1.2rem + 1.5vw, 2.4rem); }
+  .format-no{ font-family: var(--font-display); font-weight: 900; font-size: clamp(5rem, 3.5rem + 6vw, 9rem); line-height: 0.75; color: var(--accent); }
+  .format-head h2{ font-size: var(--fs-600); }
+  .format-head p{ color: var(--ink-soft); font-size: var(--fs-400); margin-top: 0.6rem; max-width: 46ch; }
+
+  .specs{ display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); margin-bottom: clamp(1.8rem, 1.4rem + 1.5vw, 2.6rem); }
+  .spec{ padding: 1rem 1rem 1.1rem 0; border-right: 1px solid var(--line); padding-left: 1rem; }
+  .spec:first-child{ padding-left: 0; }
+  .spec:last-child{ border-right: none; }
+  .spec .k{ font-family: var(--font-mono); font-size: var(--fs-000); letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 0.35rem; }
+  .spec .v{ font-family: var(--font-display); font-weight: 800; font-size: var(--fs-400); line-height: 1; }
+  .spec .s{ display: block; font-size: var(--fs-100); color: var(--ink-soft); margin-top: 0.35rem; }
+
+  .cols{ display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: clamp(1.6rem, 1rem + 2.5vw, 3rem); }
+  .cols.three{ grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .block h3{ font-family: var(--font-mono); font-size: var(--fs-200); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; border-top: 3px solid var(--ink); padding-top: 1rem; margin-bottom: 0.8rem; line-height: 1.2; }
+  .block p{ color: var(--ink-soft); font-size: var(--fs-200); }
+  .block p + p{ margin-top: 0.7rem; }
+  .block ul, .block ol{ margin: 0; padding-left: 1.15rem; color: var(--ink-soft); font-size: var(--fs-200); }
+  .block li + li{ margin-top: 0.45rem; }
+  .block li strong, .block p strong{ color: var(--ink); font-weight: 600; }
+  .block.no h3{ border-top-color: var(--accent); color: var(--accent); }
+  .block + .block{ margin-top: 0; }
+  .stack{ display: flex; flex-direction: column; gap: clamp(1.6rem, 1.2rem + 1.5vw, 2.4rem); }
+
+  .runsheet{ list-style: none; padding: 0; margin: 0; border-left: 2px dashed var(--line); }
+  .runsheet li{ position: relative; padding: 0 0 0.9rem 1.1rem; color: var(--ink-soft); font-size: var(--fs-200); }
+  .runsheet li::before{ content: ""; position: absolute; left: -6px; top: 0.45em; width: 10px; height: 10px; border-radius: 50%; background: var(--paper); border: 2px solid var(--accent); }
+  .runsheet .t{ font-family: var(--font-mono); font-size: var(--fs-100); color: var(--ink); font-weight: 600; display: block; }
+
+  .pnl{ border: 1px solid var(--line); background: var(--paper); font-size: var(--fs-200); }
+  .pnl-row{ display: flex; justify-content: space-between; gap: 1rem; padding: 0.55rem 0.9rem; border-bottom: 1px solid var(--line); }
+  .pnl-row span:first-child{ color: var(--ink-soft); }
+  .pnl-row span:last-child{ font-family: var(--font-mono); font-size: var(--fs-100); white-space: nowrap; }
+  .pnl-row.h{ background: var(--paper-2); font-family: var(--font-mono); font-size: var(--fs-000); letter-spacing: 0.1em; text-transform: uppercase; }
+  .pnl-row.h span{ color: var(--ink) !important; }
+  .pnl-row.total{ border-bottom: none; font-weight: 600; }
+  .pnl-row.total span{ color: var(--ink) !important; }
+
+  .ross{ background: var(--ink); color: var(--paper); padding: 1.3rem 1.4rem; border-radius: 4px; position: relative; }
+  .ross .eyebrow{ color: var(--highlight); display: block; margin-bottom: 0.5rem; }
+  .ross p{ color: var(--paper); opacity: 0.85; font-size: var(--fs-200); }
+  .ross p + p{ margin-top: 0.6rem; }
+
+  .tiers{ display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .tier{ background: var(--paper); padding: 1.5rem 1.4rem; display: flex; flex-direction: column; gap: 0.7rem; }
+  .tier .for{ font-family: var(--font-mono); font-size: var(--fs-000); letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+  .tier h3{ font-size: var(--fs-500); }
+  .tier .price{ font-family: var(--font-mono); font-weight: 600; font-size: var(--fs-200); }
+  .tier .price small{ display: block; font-weight: 500; color: var(--ink-soft); font-size: var(--fs-000); letter-spacing: 0.04em; margin-top: 0.2rem; }
+  .tier ul{ margin: 0; padding-left: 1.1rem; color: var(--ink-soft); font-size: var(--fs-200); }
+  .tier li + li{ margin-top: 0.35rem; }
+  .tier .limit{ margin-top: auto; padding-top: 0.6rem; border-top: 1px dashed var(--line); font-family: var(--font-mono); font-size: var(--fs-000); color: var(--ink-soft); letter-spacing: 0.03em; }
+  .tier.feature{ background: var(--paper-2); }
+
+  .rules{ counter-reset: rule; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0 clamp(1.6rem, 1rem + 2.5vw, 3rem); list-style: none; padding: 0; margin: 0; }
+  .rules li{ counter-increment: rule; border-top: 1px solid var(--line); padding: 1rem 0 1.1rem 3rem; position: relative; }
+  .rules li::before{ content: counter(rule, decimal-leading-zero); position: absolute; left: 0; top: 1rem; font-family: var(--font-mono); font-weight: 600; color: var(--accent); font-size: var(--fs-200); }
+  .rules strong{ display: block; font-family: var(--font-display); font-weight: 800; font-size: var(--fs-400); line-height: 1.05; margin-bottom: 0.3rem; }
+  .rules span{ color: var(--ink-soft); font-size: var(--fs-200); }
+
+  .nope{ display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .nope div{ background: var(--paper); padding: 1.2rem 1.3rem; }
+  .nope h3{ font-family: var(--font-mono); font-size: var(--fs-200); font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.45rem; line-height: 1.25; }
+  .nope h3::before{ content: "\2715  "; }
+  .nope p{ color: var(--ink-soft); font-size: var(--fs-200); }
+
+  .steps{ display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 0.75rem; counter-reset: step; list-style: none; padding: 0; margin: 0; }
+  .steps li{ counter-increment: step; border-top: 3px solid var(--ink); padding-top: 0.9rem; }
+  .steps li::before{ content: "Step " counter(step); display: block; font-family: var(--font-mono); font-size: var(--fs-000); letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
+  .steps strong{ display: block; font-family: var(--font-display); font-weight: 800; font-size: var(--fs-400); line-height: 1.05; margin-bottom: 0.4rem; }
+  .steps span{ color: var(--ink-soft); font-size: var(--fs-100); display: block; }
+
+  .flywheel{ display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .flywheel > div{ background: var(--paper); padding: 1.3rem 1.2rem; }
+  .flywheel .from{ font-family: var(--font-mono); font-size: var(--fs-000); letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 0.5rem; }
+  .flywheel h3{ font-size: var(--fs-400); margin-bottom: 0.6rem; }
+  .flywheel ul{ margin: 0; padding-left: 1.1rem; color: var(--ink-soft); font-size: var(--fs-200); }
+  .flywheel li + li{ margin-top: 0.35rem; }
+
+  .timeline{ display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 0; border-top: 1px solid var(--ink); }
+  .phase{ padding: 1.2rem 1rem 1.2rem 0; border-right: 1px solid var(--line); padding-left: 1rem; }
+  .phase:first-child{ padding-left: 0; }
+  .phase:last-child{ border-right: none; }
+  .phase .when{ font-family: var(--font-mono); font-size: var(--fs-000); letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); display: block; }
+  .phase h3{ font-size: var(--fs-400); margin: 0.4rem 0 0.6rem; }
+  .phase ul{ margin: 0; padding-left: 1.05rem; color: var(--ink-soft); font-size: var(--fs-100); }
+  .phase li + li{ margin-top: 0.35rem; }
+  .phase .gate{ display: block; margin-top: 0.8rem; font-family: var(--font-mono); font-size: var(--fs-000); color: var(--ink); background: var(--highlight); padding: 0.35em 0.55em; letter-spacing: 0.02em; color: #1B1208; }
+
+  .skip{ display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(2rem, 1.5rem + 2vw, 4rem); align-items: start; }
+  .skip .big{ font-family: var(--font-display); font-weight: 900; font-size: var(--fs-600); line-height: 0.95; }
+  .skip .big s{ text-decoration-color: var(--accent); text-decoration-thickness: 0.09em; }
+
+  .disclaimer{ font-family: var(--font-mono); font-size: var(--fs-000); color: var(--ink-soft); letter-spacing: 0.03em; margin-top: 1.4rem; max-width: 80ch; }
+
+  @media (max-width: 1000px){
+    .steps{ grid-template-columns: repeat(3, minmax(0,1fr)); row-gap: 1.6rem; }
+    .timeline{ grid-template-columns: 1fr; }
+    .phase{ border-right: none; border-bottom: 1px solid var(--line); padding-left: 0; }
+    .flywheel{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+  }
+  @media (max-width: 920px){
+    .ladder{ grid-template-columns: repeat(2, 1fr); }
+    .rung{ min-height: 0 !important; }
+    .specs{ grid-template-columns: repeat(2, 1fr); }
+    .spec{ padding-left: 1rem !important; border-bottom: 1px solid var(--line); }
+    .spec:nth-child(odd){ padding-left: 0 !important; }
+    .spec:nth-child(2){ border-right: none; }
+    .cols, .cols.three, .tiers, .rules, .nope, .skip{ grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px){
+    .ladder, .flywheel, .steps{ grid-template-columns: 1fr; }
+    .format-head{ grid-template-columns: 1fr; }
+    .post .note{ position: static; display: block; margin-top: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <filter id="ink-distress" x="-30%" y="-30%" width="160%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2"/>
+    </filter>
+  </defs>
+  <symbol id="b2b-mark" viewBox="0 0 200 200">
+    <g transform="rotate(-3 100 100)" filter="url(#ink-distress)">
+      <circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="1 9" stroke-linecap="round"/>
+      <circle cx="100" cy="100" r="76" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      <text x="100" y="90" text-anchor="middle" font-family="'Big Shoulders Display', 'Arial Narrow', sans-serif" font-weight="900" font-size="36" letter-spacing="1" fill="currentColor">B2B</text>
+      <line x1="60" y1="108" x2="140" y2="108" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 5"/>
+      <circle cx="60" cy="108" r="3" fill="currentColor"/>
+      <circle cx="140" cy="108" r="3" fill="currentColor"/>
+      <text x="100" y="140" text-anchor="middle" font-family="'Big Shoulders Display', 'Arial Narrow', sans-serif" font-weight="900" font-size="36" letter-spacing="2" fill="currentColor">IRL</text>
+    </g>
+  </symbol>
+  <symbol id="icon-memo" viewBox="0 0 40 40">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#ink-distress)">
+      <path d="M5,11 L4.5,29.5 L36,30 L36.5,10.5 Z"/>
+      <path d="M5,11.5 C10,16 17,22.5 20,22.5 C23,22.5 30,16 36,10.5"/>
+    </g>
+  </symbol>
+  <symbol id="icon-room" viewBox="0 0 40 40">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#ink-distress)">
+      <path d="M6,9 Q5.5,4.5 10,4.5 L30.5,4 Q34.5,4.5 34.5,9 L34,20 Q34.5,24 30,24 L14.5,24.5 L8.5,31 L9.5,24.5 L10,24.5 Q6,24.5 6,20 Z"/>
+    </g>
+  </symbol>
+  <symbol id="icon-tape" viewBox="0 0 40 40">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#ink-distress)">
+      <rect x="4.5" y="9" width="31" height="21" rx="2.5"/>
+      <circle cx="13.5" cy="19.5" r="5"/>
+      <circle cx="26.5" cy="19.5" r="5"/>
+      <circle cx="13.5" cy="19.5" r="1.4" fill="currentColor"/>
+      <circle cx="26.5" cy="19.5" r="1.4" fill="currentColor"/>
+      <path d="M10.5,26.5 L29.5,27"/>
+    </g>
+  </symbol>
+  <symbol id="icon-meetup" viewBox="0 0 40 40">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#ink-distress)">
+      <path d="M20,5 C13,5 7,10.5 7,17.5 C7,27 20,36 20,36 C20,36 33,27 33,17.5 C33,10.5 27,5 20,5 Z"/>
+      <circle cx="20" cy="17" r="5.5"/>
+    </g>
+  </symbol>
+  <symbol id="icon-ticket" viewBox="0 0 40 40">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#ink-distress)">
+      <path d="M5,14 C5,11.5 7,11.5 7,9 C7,6.5 5,6.5 5,4 L35,4 C35,6.5 33,6.5 33,9 C33,11.5 35,11.5 35,14 L35,26 C35,28.5 33,28.5 33,31 C33,33.5 35,33.5 35,36 L5,36 C5,33.5 7,33.5 7,31 C7,28.5 5,28.5 5,26 Z"/>
+      <path d="M20,4 L20,36" stroke-dasharray="3 4"/>
+    </g>
+  </symbol>
+  <symbol id="icon-book" viewBox="0 0 40 40">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#ink-distress)">
+      <path d="M20,9 C17,6.5 10,5.5 5,6.5 L5,30 C10,29 17,30 20,32.5 C23,30 30,29 35,30 L35,6.5 C30,5.5 23,6.5 20,9 Z"/>
+      <path d="M20,9 L20,32.5"/>
+    </g>
+  </symbol>
+  <symbol id="icon-clip" viewBox="0 0 30 60">
+    <path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" d="M10,10 C10,4.5 20,4.5 20,10 L20,44 C20,49 12.5,49 12.5,44 L12.5,17.5 C12.5,14.5 16.5,14.5 16.5,17.5 L16.5,38" filter="url(#ink-distress)"/>
+  </symbol>
+</svg>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header>
+  <nav class="wrap nav">
+    <a href="index.html" class="wordmark"><svg class="mark" viewBox="0 0 200 200" role="img" aria-label="B2B IRL"><use href="#b2b-mark"/></svg> B2B IRL <span>ADMIT ONE</span></a>
+    <ul class="nav-links">
+      <li><a href="community.html">The Room</a></li>
+      <li><a href="newsletter.html">Newsletter</a></li>
+      <li><a href="podcast.html">The Tape</a></li>
+      <li><a href="meetups.html">Meetups</a></li>
+      <li><a href="almanack.html">Almanack</a></li>
+      <li><a href="homecoming.html">Homecoming</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a class="login" href="community.html">Log in</a>
+      <a class="btn" href="newsletter.html">Join free</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="navToggle">Menu</button>
+  </nav>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<main>
+  <!-- HERO -->
+  <section class="page-hero">
+    <svg class="watermark" viewBox="0 0 200 200" aria-hidden="true"><use href="#b2b-mark"/></svg>
+    <div class="wrap">
+      <span class="eyebrow rise">/foundation &middot; The Canada plan</span>
+      <h1 class="rise-2">Bringing B2B marketing IRL, across Canada.</h1>
+      <p class="rise-3">Four formats and one ladder. Each step earns the right to take the next one. Below is everything: who each event is for, who pays for it, who we'd never take money from, and how it all rolls out.</p>
+
+      <div class="post rise-3">
+        <span class="pin"></span>
+        <blockquote>&ldquo;Alright&hellip; I&rsquo;m very serious about bringing a marketing event to Canada&nbsp;🇨🇦&rdquo;</blockquote>
+        <cite>Ross &middot; the post that started this</cite>
+        <span class="note">ok, here's how &darr;</span>
+      </div>
+
+      <nav class="toc" aria-label="On this page">
+        <a class="topic" href="#ladder">The ladder</a>
+        <a class="topic" href="#glance">At a glance</a>
+        <a class="topic" href="#dinner">01 Dinner Series</a>
+        <a class="topic" href="#chapter">02 City Chapter</a>
+        <a class="topic" href="#workshops">03 Workshops</a>
+        <a class="topic" href="#homecoming">04 Homecoming</a>
+        <a class="topic" href="#sponsors">Who sponsors what</a>
+        <a class="topic" href="#never">Who we never take</a>
+        <a class="topic" href="#how">How to sponsor</a>
+        <a class="topic" href="#voice">Ross's voice</a>
+        <a class="topic" href="#rollout">Rollout</a>
+        <a class="topic" href="#skip">What we skip</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- THESIS + LADDER -->
+  <section class="alt" id="ladder">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-path">/foundation/why</span>
+          <h2>Small rooms first. Big stage last.</h2>
+        </div>
+        <p>Most "marketing events" start with the ballroom and hope the people follow. We start with the people and build the ballroom around them.</p>
+      </div>
+
+      <div class="prose reveal">
+        <p>Senior B2B marketers in Canada don't have a room of their own. The big gatherings happen south of the border, and the local ones tend to be vendor showcases or after-work mixers where nobody senior stays past the first drink. <strong>The gap isn't another conference. It's trust.</strong></p>
+        <p>So B2B IRL runs as a media brand that happens to host events, not an events company that happens to post content. Every format below does two jobs: it gives the people in the room something real, and it produces the stories, opinions and data that make B2B IRL, and the person hosting it, the voice of B2B marketing in Canada.</p>
+      </div>
+
+      <div class="ladder">
+        <div class="rung reveal" style="--i:0">
+          <span class="step">Step 1 &middot; Trust</span>
+          <h3>Dinner Series</h3>
+          <span class="role">15&ndash;20 CMOs &middot; monthly</span>
+          <p>Builds the founding list and shows us who actually turns up.</p>
+          <a href="#dinner" aria-label="Read about the Dinner Series"></a>
+        </div>
+        <div class="rung reveal" style="--i:1">
+          <span class="step">Step 2 &middot; Engine</span>
+          <h3>City Chapter</h3>
+          <span class="role">~100 people &middot; quarterly</span>
+          <p>The repeatable machine: sponsor revenue, content, community growth.</p>
+          <a href="#chapter" aria-label="Read about the City Chapter"></a>
+        </div>
+        <div class="rung reveal" style="--i:2">
+          <span class="step">Step 3 &middot; Skills</span>
+          <h3>Workshops</h3>
+          <span class="role">25&ndash;30 seats &middot; every 1&ndash;2 months</span>
+          <p>Paid, sponsor-light revenue, and value beyond networking.</p>
+          <a href="#workshops" aria-label="Read about the Workshops"></a>
+        </div>
+        <div class="rung reveal" style="--i:3">
+          <span class="step">Step 4 &middot; Brand</span>
+          <h3>Homecoming</h3>
+          <span class="role">300&ndash;400 people &middot; yearly, from year 2</span>
+          <p>The flagship. The payoff for everything built before it.</p>
+          <a href="#homecoming" aria-label="Read about Homecoming"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AT A GLANCE -->
+  <section id="glance">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-path">/foundation/at-a-glance</span>
+          <h2>All four, side by side.</h2>
+        </div>
+        <p>All prices in CAD and indicative. They get locked after the first event of each format.</p>
+      </div>
+      <div class="table-wrap reveal">
+        <table class="grid">
+          <thead>
+            <tr><th scope="col">Format</th><th scope="col">Size</th><th scope="col">Cadence</th><th scope="col">Guests pay</th><th scope="col">Who funds it</th><th scope="col">Access</th><th scope="col">Built for</th><th scope="col">Job</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Dinner Series</th><td>15&ndash;20</td><td>Monthly, rotating cities once proven</td><td>Free</td><td>1 host sponsor per dinner</td><td>Invite-only</td><td>CMOs, VPs Marketing</td><td>Trust &amp; founding list</td></tr>
+            <tr><th scope="row">City Chapter</th><td>~100</td><td>Quarterly per city</td><td>Free with approval, or $75&ndash;100</td><td>2&ndash;4 sponsors + tickets</td><td>Application</td><td>Mid&ndash;senior marketers, founders, vendors</td><td>Revenue &amp; growth engine</td></tr>
+            <tr><th scope="row">Workshops</th><td>25&ndash;30</td><td>Every 1&ndash;2 months</td><td>$100&ndash;300</td><td>Tickets. 0&ndash;1 tool partner</td><td>Open, first come</td><td>Managers, growth, agency &amp; in-house teams</td><td>Sponsor-free revenue &amp; skills</td></tr>
+            <tr><th scope="row">Homecoming</th><td>300&ndash;400</td><td>Yearly, from year 2</td><td>Premium, tiered</td><td>Tickets + title + 5&ndash;8 partners</td><td>Application</td><td>Senior marketers, chapter members, leaders</td><td>Turn community into brand</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 DINNER -->
+  <section class="alt" id="dinner">
+    <div class="wrap">
+      <div class="format-head reveal">
+        <span class="format-no">01</span>
+        <div>
+          <span class="eyebrow">Step 1 &middot; Trust</span>
+          <h2>Dinner Series</h2>
+          <p>One long table, 15 to 20 senior B2B marketers, no stage. The most important event we run and the smallest.</p>
+        </div>
+      </div>
+
+      <div class="specs reveal">
+        <div class="spec"><span class="k">Size</span><span class="v">15&ndash;20</span><span class="s">One table, never two</span></div>
+        <div class="spec"><span class="k">Cadence</span><span class="v">Monthly</span><span class="s">Toronto first, then rotating cities</span></div>
+        <div class="spec"><span class="k">Price to guest</span><span class="v">Free</span><span class="s">Strictly invite-only</span></div>
+        <div class="spec"><span class="k">Funded by</span><span class="v">1 host</span><span class="s">Covers venue &amp; food</span></div>
+      </div>
+
+      <div class="cols reveal">
+        <div class="stack">
+          <div class="block">
+            <h3>What it is</h3>
+            <p>A host-led dinner. A restaurant, a brand or a member hosts; B2B IRL curates the guest list. Each dinner has exactly one host sponsor, who covers the venue and food in exchange for a seat at the table and a mention. No slides, no badges, no pitch.</p>
+            <p>Every dinner runs under the Chatham House rule: what's said can be used, but never attributed. That's what makes senior people talk.</p>
+          </div>
+          <div class="block">
+            <h3>Who it's for</h3>
+            <ul>
+              <li><strong>CMOs and VPs of Marketing</strong> at B2B companies, roughly Series A through public.</li>
+              <li>Founders who still run marketing at companies past ~$5M ARR, by exception.</li>
+              <li>A mix every time: roughly a third SaaS, a third services/industrial B2B, a third wildcard.</li>
+            </ul>
+          </div>
+          <div class="block no">
+            <h3>Who it's not for</h3>
+            <ul>
+              <li>Directors and managers. Their room is the City Chapter.</li>
+              <li>Salespeople, recruiters and agency owners, however senior.</li>
+              <li>Anyone who asks "can I bring a colleague?" The seat is personal.</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Run of the night</h3>
+            <ol class="runsheet">
+              <li><span class="t">18:30 &middot; Arrivals</span>One drink, name cards already on the table. No name tags.</li>
+              <li><span class="t">19:00 &middot; Seated</span>Host welcome, 2 minutes max. Ross sets the table with one question.</li>
+              <li><span class="t">19:15 &middot; The question</span>Everyone answers it in turn over the first course, e.g. "What did you stop doing this year?"</li>
+              <li><span class="t">20:00 &middot; Open table</span>Mains. The conversation goes wherever it goes. Seats swap after mains.</li>
+              <li><span class="t">21:30 &middot; Close</span>No hard stop, but the bill is settled and nobody is sold anything.</li>
+              <li><span class="t">+48 hrs</span>Double opt-in intros, a thank-you note, and a recap piece (unattributed).</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="block">
+            <h3>Who hosts (sponsors) it</h3>
+            <ul>
+              <li><span class="mk best">Best fit</span> <strong>VC and growth-equity firms.</strong> They want their portfolio CMOs in rooms like this and they never pitch at the table.</li>
+              <li><span class="mk yes">Good</span> <strong>Martech, data and AI tools</strong> that sell to CMOs, if their own CMO or CEO takes the seat (not a sales rep).</li>
+              <li><span class="mk yes">Good</span> <strong>Restaurants and hotels</strong> hosting in-kind, in exchange for a room full of people who book corporate dinners.</li>
+              <li><span class="mk yes">Good</span> <strong>A member</strong> who wants to host at their own office or favourite spot.</li>
+              <li><span class="mk no">No</span> Agencies, consultancies, recruiters, lead-gen vendors. See <a href="#never">why</a>.</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>What the host gets, and doesn't</h3>
+            <ul>
+              <li>One seat at the table for a senior person. One.</li>
+              <li>A two-minute welcome, and "Hosted by" on the invite, menu card and recap.</li>
+              <li>A mention in the newsletter recap and Ross's post about the dinner.</li>
+              <li>A professional photo set from the night.</li>
+              <li><strong>Not</strong> the guest list, emails or a follow-up sequence. Intros only if both sides opt in.</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Sample economics &middot; Toronto, 18 guests</h3>
+            <div class="pnl">
+              <div class="pnl-row h"><span>Line</span><span>CAD</span></div>
+              <div class="pnl-row"><span>Private room, food, wine (host pays venue directly)</span><span>3,500&ndash;5,500</span></div>
+              <div class="pnl-row"><span>Curation &amp; production fee to B2B IRL (from dinner 4)</span><span>1,500&ndash;2,500</span></div>
+              <div class="pnl-row"><span>Photo, printed menus, name cards</span><span>&minus;400</span></div>
+              <div class="pnl-row total"><span>Host's all-in cost</span><span>~5,000&ndash;8,000</span></div>
+            </div>
+            <p class="table-note">The first three dinners are cost-only: we prove the room before charging for it.</p>
+          </div>
+          <div class="block">
+            <h3>How we'll know it works</h3>
+            <ul>
+              <li>Show rate above 85% of confirmed guests.</li>
+              <li>At least 70% of the table is CMO or VP level.</li>
+              <li>Guests asking to come back, or nominating a peer.</li>
+              <li>A founding list of 50+ senior marketers by month three.</li>
+            </ul>
+          </div>
+          <div class="ross">
+            <span class="eyebrow">Ross's seat</span>
+            <p>Ross hosts every dinner in year one. He asks the opening question and listens more than he talks.</p>
+            <p>Afterwards he publishes "What 18 CMOs told me this month": the patterns, never the names. Over a year that can become the most-read B2B marketing column in Canada, written from rooms nobody else is in.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 CHAPTER -->
+  <section id="chapter">
+    <div class="wrap">
+      <div class="format-head reveal">
+        <span class="format-no">02</span>
+        <div>
+          <span class="eyebrow">Step 2 &middot; Engine</span>
+          <h2>City Chapter</h2>
+          <p>A half or full day in one city: CMO firesides, a short panel and structured networking for about 100 people.</p>
+        </div>
+      </div>
+
+      <div class="specs reveal">
+        <div class="spec"><span class="k">Size</span><span class="v">~100</span><span class="s">Curated, not capped by the venue</span></div>
+        <div class="spec"><span class="k">Cadence</span><span class="v">Quarterly</span><span class="s">Per city, run by a chapter lead</span></div>
+        <div class="spec"><span class="k">Price to guest</span><span class="v">$0 or $75&ndash;100</span><span class="s">Fee kills no-shows</span></div>
+        <div class="spec"><span class="k">Funded by</span><span class="v">2&ndash;4 sponsors</span><span class="s">Title down to community</span></div>
+      </div>
+
+      <div class="cols reveal">
+        <div class="stack">
+          <div class="block">
+            <h3>What it is</h3>
+            <p>The repeatable engine. Every quarter, in every live city, the same shape: two or three fireside chats with CMOs who've actually run the thing, one short panel, and networking that's designed rather than left to chance.</p>
+            <p>It's run under a <strong>chapter-lead model</strong>: a respected local marketer runs the city using the B2B IRL playbook. B2B IRL owns the brand, the sponsor relationships, the content and the standards.</p>
+          </div>
+          <div class="block">
+            <h3>Pricing: our recommendation</h3>
+            <p>Two options are on the table: free with approval, or a small fee. <strong>We recommend a hybrid:</strong> $75&ndash;100 for general admission to keep no-shows under 15%, with senior invitees (Director+ from the dinner list), speakers and chapter members comped. Free events often lose 40&ndash;50% of registrants on the day; even a small fee cuts that sharply.</p>
+          </div>
+          <div class="block">
+            <h3>Who it's for</h3>
+            <ul>
+              <li><strong>Mid-to-senior B2B marketers:</strong> managers, directors, heads of.</li>
+              <li><strong>Founders</strong> who still own marketing.</li>
+              <li><strong>The vendors who sell to them,</strong> capped at ~10% of the room, clearly badged.</li>
+              <li>A curated senior guest list (roughly 20 seats) keeps the room strong.</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Run of the day (half-day version)</h3>
+            <ol class="runsheet">
+              <li><span class="t">13:00 &middot; Doors</span>Coffee, badges with a "working on" line instead of just a title.</li>
+              <li><span class="t">13:30 &middot; Ross opens</span>10 minutes: "The state of B2B marketing in Canada, this quarter."</li>
+              <li><span class="t">13:45 &middot; Fireside 1</span>A CMO, one campaign, the real numbers. 25 min + Q&amp;A.</li>
+              <li><span class="t">14:30 &middot; Structured networking</span>Tables by problem (pipeline, brand, AI, team), 3 rounds of 12 minutes.</li>
+              <li><span class="t">15:15 &middot; Fireside 2</span>Title sponsor intro: 5 minutes, before this session only.</li>
+              <li><span class="t">16:00 &middot; Panel</span>Three operators, one disagreement, 30 minutes.</li>
+              <li><span class="t">16:45 &middot; Drinks</span>Supporting sponsor hosts. Ends 18:30.</li>
+            </ol>
+          </div>
+          <div class="block">
+            <h3>The chapter lead</h3>
+            <ul>
+              <li><strong>Who:</strong> a respected senior marketer in that city, not an event planner.</li>
+              <li><strong>Does:</strong> local speakers, venue, guest curation, host on the day.</li>
+              <li><strong>Gets:</strong> the title, a stage every quarter, an honorarium or 10&ndash;15% of chapter net, and a Homecoming seat.</li>
+              <li><strong>Playbook covers:</strong> run-of-show, speaker brief, sponsor rules, guest criteria, content checklist, budget template.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="block">
+            <h3>Who sponsors it</h3>
+            <ul>
+              <li><span class="mk best">Title</span> <strong>Martech, data and AI platforms</strong> selling into marketing teams. Also <strong>banks, fintech and cloud providers</strong> with a B2B or startup practice.</li>
+              <li><span class="mk yes">Supporting</span> The same categories, one tier down, plus <strong>VC firms</strong> who want dealflow and portfolio hiring.</li>
+              <li><span class="mk lim">Community</span> <strong>Venues, coworking spaces, drinks brands,</strong> local <strong>associations, accelerators and media</strong>, in-kind or cross-promotion.</li>
+              <li><span class="mk lim">Community</span> <strong>Recruiters and fractional-exec firms:</strong> community level only, never title.</li>
+              <li><span class="mk no">No</span> Agencies and consultancies at any tier. Lead-gen and list sellers. See <a href="#never">why</a>.</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Sponsor tiers for one chapter event</h3>
+            <div class="table-wrap">
+              <table class="grid" style="min-width:0">
+                <thead><tr><th scope="col">Tier</th><th scope="col">CAD</th><th scope="col">Gets</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Title</th><td>10&ndash;15k</td><td>"Presented by", 5-min intro, 4 passes, category exclusivity, newsletter feature, opt-in leads<small>1 per event</small></td></tr>
+                  <tr><th scope="row">Supporting</th><td>4&ndash;6k</td><td>Hosts drinks, 2 passes, one demo table, logo, newsletter mention<small>Max 2</small></td></tr>
+                  <tr><th scope="row">Community</th><td>In-kind to 2k</td><td>1 pass, logo on partner wall, social mention<small>Max 3</small></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">Annual option: title for all 4 quarters in a city for ~CAD 40k (about 25% off).</p>
+          </div>
+          <div class="block">
+            <h3>Sample economics &middot; Toronto, 100 people, half day</h3>
+            <div class="pnl">
+              <div class="pnl-row h"><span>Revenue</span><span>CAD</span></div>
+              <div class="pnl-row"><span>Title sponsor</span><span>12,000</span></div>
+              <div class="pnl-row"><span>2 supporting sponsors</span><span>10,000</span></div>
+              <div class="pnl-row"><span>~60 paid tickets &times; $85</span><span>5,100</span></div>
+              <div class="pnl-row h"><span>Costs</span><span></span></div>
+              <div class="pnl-row"><span>Venue &amp; AV</span><span>&minus;6,500</span></div>
+              <div class="pnl-row"><span>Food &amp; drinks (~$75 pp)</span><span>&minus;7,500</span></div>
+              <div class="pnl-row"><span>Photo, video, clips</span><span>&minus;3,000</span></div>
+              <div class="pnl-row"><span>Speaker travel, gifts, print</span><span>&minus;2,000</span></div>
+              <div class="pnl-row"><span>Chapter lead share &amp; ops</span><span>&minus;2,000</span></div>
+              <div class="pnl-row total"><span>Net per event</span><span>~6,000</span></div>
+            </div>
+          </div>
+          <div class="block">
+            <h3>How we'll know it works</h3>
+            <ul>
+              <li>At least 2 applications for every seat.</li>
+              <li>No-shows under 15%.</li>
+              <li>Half of sponsors renew for the next quarter.</li>
+              <li>At least 10 pieces of content per event: clips, a recap, a podcast episode.</li>
+            </ul>
+          </div>
+          <div class="ross">
+            <span class="eyebrow">Ross's seat</span>
+            <p>Ross opens every chapter in every city with the same ten-minute segment: the state of B2B marketing in Canada this quarter. Four times a year, in every city, that becomes a recurring, quotable point of view.</p>
+            <p>He moderates one fireside per event; the chapter lead hosts the rest. The clips feed The Tape and his own channels.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 WORKSHOPS -->
+  <section class="alt" id="workshops">
+    <div class="wrap">
+      <div class="format-head reveal">
+        <span class="format-no">03</span>
+        <div>
+          <span class="eyebrow">Step 3 &middot; Skills</span>
+          <h2>Marketing Workshops</h2>
+          <p>Hands-on build sessions where marketers ship real work together. You leave with something built, not a notebook of quotes.</p>
+        </div>
+      </div>
+
+      <div class="specs reveal">
+        <div class="spec"><span class="k">Size</span><span class="v">25&ndash;30</span><span class="s">Hard cap, for quality</span></div>
+        <div class="spec"><span class="k">Cadence</span><span class="v">Every 1&ndash;2 months</span><span class="s">Rotating topics</span></div>
+        <div class="spec"><span class="k">Price to guest</span><span class="v">$100&ndash;300</span><span class="s">Priced by the outcome</span></div>
+        <div class="spec"><span class="k">Funded by</span><span class="v">Tickets</span><span class="s">0 sponsors, or 1 tool partner</span></div>
+      </div>
+
+      <div class="cols reveal">
+        <div class="stack">
+          <div class="block">
+            <h3>What it is</h3>
+            <p>A working marketer teaches. Not a vendor, not a guru: someone who did the thing last quarter. Laptops open, real accounts, real data where possible.</p>
+            <p>This is the one format that earns revenue without depending on a sponsor, and it gives the community value beyond networking.</p>
+          </div>
+          <div class="block">
+            <h3>Example sessions</h3>
+            <ul>
+              <li><strong>ABM teardown</strong> ($150): bring your target account list and leave with a tiered program.</li>
+              <li><strong>Outbound build</strong> ($200): a working sequence, copy and targeting, live by end of day.</li>
+              <li><strong>AI workflows for marketing ops</strong> ($250): three automations built and running.</li>
+              <li><strong>Positioning sprint</strong> ($300, full day): a messaging doc your CEO will sign off.</li>
+              <li><strong>Content that drives pipeline</strong> ($150): a 90-day distribution plan for one hero piece.</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Who it's for</h3>
+            <ul>
+              <li><strong>Marketing managers</strong> and <strong>growth marketers</strong> who want skills.</li>
+              <li><strong>In-house teams</strong> buying seats together, with a team rate for 3 or more.</li>
+              <li><strong>Agency teams</strong> as attendees. Welcome to learn; not welcome to sponsor or teach-to-sell.</li>
+              <li>Anyone who grabs a seat. No application needed.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="block">
+            <h3>Sponsor model: almost none</h3>
+            <ul>
+              <li><span class="mk lim">Optional</span> <strong>One tool partner</strong>, only if their tool is genuinely what the instructor would use anyway. They provide free credits or licences for attendees and can add CAD 1&ndash;2k.</li>
+              <li>The tool partner does not teach, pitch or get the attendee list. Their logo goes on the workbook, and that's it.</li>
+              <li><span class="mk no">No</span> Title sponsors, "presented by", or sponsor-led curriculum. The moment content is bought, the workshop is worthless.</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Sample economics &middot; 28 seats &times; $200</h3>
+            <div class="pnl">
+              <div class="pnl-row h"><span>Line</span><span>CAD</span></div>
+              <div class="pnl-row"><span>Ticket revenue</span><span>5,600</span></div>
+              <div class="pnl-row"><span>Instructor (40% revenue share)</span><span>&minus;2,240</span></div>
+              <div class="pnl-row"><span>Room, coffee, lunch</span><span>&minus;900</span></div>
+              <div class="pnl-row"><span>Workbook, tools, admin</span><span>&minus;300</span></div>
+              <div class="pnl-row total"><span>Net per workshop</span><span>~2,150</span></div>
+            </div>
+            <p class="table-note">Refunds: full refund up to 7 days out, transferable seat after that.</p>
+          </div>
+          <div class="block">
+            <h3>How we'll know it works</h3>
+            <ul>
+              <li>Sold out 7+ days before the date.</li>
+              <li>90%+ of attendees ship the thing by the end of the session.</li>
+              <li>A third of attendees buy a second workshop within six months.</li>
+            </ul>
+          </div>
+          <div class="ross">
+            <span class="eyebrow">Ross's seat</span>
+            <p>Ross doesn't teach these; he curates who does. Every instructor is "a Ross pick", which quietly positions him as the person who knows who's good at what in Canadian B2B.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 HOMECOMING -->
+  <section id="homecoming">
+    <div class="wrap">
+      <div class="format-head reveal">
+        <span class="format-no">04</span>
+        <div>
+          <span class="eyebrow">Step 4 &middot; Brand</span>
+          <h2>Homecoming</h2>
+          <p>A multi-day residency, ideally four days, for the boldest minds in B2B marketing. It launches in year 2, and not a day before it's earned.</p>
+        </div>
+      </div>
+
+      <div class="specs reveal">
+        <div class="spec"><span class="k">Size</span><span class="v">300&ndash;400</span><span class="s">Application-based</span></div>
+        <div class="spec"><span class="k">Cadence</span><span class="v">Yearly</span><span class="s">From year 2</span></div>
+        <div class="spec"><span class="k">Price to guest</span><span class="v">Premium</span><span class="s">Tiered tickets</span></div>
+        <div class="spec"><span class="k">Funded by</span><span class="v">Title + 5&ndash;8</span><span class="s">Full sponsorship package</span></div>
+      </div>
+
+      <div class="cols reveal">
+        <div class="stack">
+          <div class="block">
+            <h3>What it is</h3>
+            <p>Talks, workshops, dinners and a lot of deliberately unstructured time. Everything from steps one to three, in one place, for four days. Every chapter, every dinner regular, every workshop alumnus.</p>
+            <p><strong>The launch gate:</strong> Homecoming only goes ahead once three or more chapters are running, each with at least two cycles, and at least half of chapter sponsors have renewed. Until then, it stays a promise.</p>
+          </div>
+          <div class="block">
+            <h3>Shape of the four days</h3>
+            <ol class="runsheet">
+              <li><span class="t">Day 1 &middot; Arrive</span>Chapter-by-chapter welcome dinners. Ross's opening keynote at night.</li>
+              <li><span class="t">Day 2 &middot; Main stage</span>Short, sharp talks from operators. No vendor keynotes. Afternoon workshops.</li>
+              <li><span class="t">Day 3 &middot; Tracks &amp; dinners</span>Deep-dive tracks by role. Evening: 15 hosted dinners in the Dinner Series format.</li>
+              <li><span class="t">Day 4 &middot; Close</span>The state-of-the-room report, the Almanack launch, Ross's closing talk.</li>
+            </ol>
+          </div>
+          <div class="block">
+            <h3>Tickets (indicative, CAD)</h3>
+            <div class="table-wrap">
+              <table class="grid" style="min-width:0">
+                <thead><tr><th scope="col">Tier</th><th scope="col">Price</th><th scope="col">For</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Member</th><td>1,200&ndash;1,500</td><td>Chapter members and alumni, first access</td></tr>
+                  <tr><th scope="row">Standard</th><td>1,800&ndash;2,200</td><td>Approved applicants</td></tr>
+                  <tr><th scope="row">Residency</th><td>3,500+</td><td>Includes lodging, all dinners, reserved seating</td></tr>
+                  <tr><th scope="row">Invited</th><td>Comped</td><td>Speakers, chapter leads, a curated senior list</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="block">
+            <h3>Who sponsors it</h3>
+            <ul>
+              <li><span class="mk best">Title</span> A <strong>category leader</strong> (martech platform, bank or cloud provider) that has sponsored chapters in year 1. The title goes to proven partners first.</li>
+              <li><span class="mk yes">Partner &times; 5&ndash;8</span> Data, AI, analytics and sales-tech platforms; VC firms hosting a dinner night; a hospitality partner.</li>
+              <li><span class="mk lim">In-kind</span> Venue, hotel, travel and drinks partners.</li>
+              <li><span class="mk no">No</span> Agencies, lead-gen sellers, or anyone wanting a paid keynote.</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Sponsorship package (indicative, CAD)</h3>
+            <div class="table-wrap">
+              <table class="grid" style="min-width:0">
+                <thead><tr><th scope="col">Tier</th><th scope="col">CAD</th><th scope="col">Gets</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Title</th><td>100k+</td><td>"Homecoming presented by", day-2 intro, 12 passes, category exclusivity, year-round presence<small>1</small></td></tr>
+                  <tr><th scope="row">Partner</th><td>20&ndash;50k</td><td>Owns a track, dinner night or lounge; 4&ndash;6 passes; logo; opt-in leads<small>5&ndash;8</small></td></tr>
+                  <tr><th scope="row">Hospitality</th><td>In-kind</td><td>Venue, hotel, drinks; 2 passes; credited throughout<small>2&ndash;3</small></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">Target revenue mix: about 55% tickets and 45% sponsorship, so the event never depends on one cheque. The full budget is built from year-one chapter data.</p>
+          </div>
+          <div class="block">
+            <h3>How we'll know it works</h3>
+            <ul>
+              <li>Sold out through applications, not discounts.</li>
+              <li>The title sponsor renews for year 3 before the event ends.</li>
+              <li>More than 40% of attendees come from outside the host city.</li>
+            </ul>
+          </div>
+          <div class="ross">
+            <span class="eyebrow">Ross's seat</span>
+            <p>Ross opens and closes. The closing talk comes with an annual report, "The State of B2B Marketing, from the Room", built from a year of dinners, chapters and workshops. It's data nobody else has, and it's the piece the industry quotes all year.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSOR FIT MATRIX -->
+  <section class="alt" id="sponsors">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-path">/foundation/sponsors</span>
+          <h2>Who sponsors what.</h2>
+        </div>
+        <p>The right money in the right room. The wrong money, even in the right room, costs more than it pays.</p>
+      </div>
+      <div class="table-wrap reveal">
+        <table class="grid fit">
+          <thead>
+            <tr><th scope="col">Sponsor type</th><th scope="col">Dinner</th><th scope="col">Chapter</th><th scope="col">Workshop</th><th scope="col">Homecoming</th><th scope="col">Why</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Martech &amp; AI tools</th><td><span class="mk yes">Host*</span></td><td><span class="mk best">Title</span></td><td><span class="mk lim">Tool partner</span></td><td><span class="mk best">Title / partner</span></td><td class="why">Their buyer is the room. *Only if their CMO or CEO takes the seat.</td></tr>
+            <tr><th scope="row">Data, intent &amp; analytics</th><td><span class="mk yes">Host*</span></td><td><span class="mk yes">Title / supporting</span></td><td><span class="mk lim">Tool partner</span></td><td><span class="mk yes">Partner</span></td><td class="why">Same buyer. Strong fit for the "real numbers" firesides.</td></tr>
+            <tr><th scope="row">VC &amp; growth equity</th><td><span class="mk best">Host</span></td><td><span class="mk yes">Supporting</span></td><td><span class="mk no">No</span></td><td><span class="mk yes">Dinner night</span></td><td class="why">They want portfolio CMOs in the room and never pitch at the table.</td></tr>
+            <tr><th scope="row">Banks, fintech, cloud</th><td><span class="mk yes">Host</span></td><td><span class="mk best">Title</span></td><td><span class="mk no">No</span></td><td><span class="mk best">Title</span></td><td class="why">Big budgets, a B2B story, and no conflict with the content.</td></tr>
+            <tr><th scope="row">Restaurants, hotels, venues</th><td><span class="mk yes">In-kind host</span></td><td><span class="mk lim">Community</span></td><td><span class="mk lim">Venue</span></td><td><span class="mk yes">Hospitality</span></td><td class="why">They get a room of people who book corporate events.</td></tr>
+            <tr><th scope="row">Associations, accelerators, media</th><td><span class="mk no">No</span></td><td><span class="mk lim">Community</span></td><td><span class="mk lim">Promo</span></td><td><span class="mk lim">Community</span></td><td class="why">Cross-promotion and reach, not cash.</td></tr>
+            <tr><th scope="row">Recruiters &amp; fractional execs</th><td><span class="mk no">No</span></td><td><span class="mk lim">Community only</span></td><td><span class="mk no">No</span></td><td><span class="mk lim">Community</span></td><td class="why">Useful to members, but a dinner of CMOs becomes a hunting ground.</td></tr>
+            <tr><th scope="row">Agencies &amp; consultancies</th><td><span class="mk no">No</span></td><td><span class="mk no">No</span></td><td><span class="mk no">No</span></td><td><span class="mk no">No</span></td><td class="why">They sell services to the same CMOs. The room has to stay neutral.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Solid = best fit &middot; Yellow = good fit &middot; Outline = limited role &middot; Red = not accepted.</p>
+
+      <div style="margin-top: clamp(2.4rem, 1.8rem + 2vw, 3.4rem);">
+        <div class="section-head reveal" style="margin-bottom:1.4rem">
+          <h2 style="font-size:var(--fs-500)">Bundles that make it easy to say yes.</h2>
+        </div>
+        <div class="tiers reveal">
+          <div class="tier feature">
+            <span class="for">Year one &middot; max 2</span>
+            <h3>Founding Partner</h3>
+            <span class="price">CAD 50&ndash;75k / year<small>Paid quarterly</small></span>
+            <ul>
+              <li>Hosts 3 dinners across the year.</li>
+              <li>Title of 2 City Chapter events.</li>
+              <li>Named as a founding partner on everything, permanently.</li>
+              <li>First right of refusal on the Homecoming title.</li>
+            </ul>
+            <span class="limit">Category exclusive. Two partners maximum, never in the same category.</span>
+          </div>
+          <div class="tier">
+            <span class="for">Per city &middot; per year</span>
+            <h3>Chapter Title</h3>
+            <span class="price">~CAD 40k / year<small>4 quarterly events</small></span>
+            <ul>
+              <li>"B2B IRL Toronto, presented by&hellip;"</li>
+              <li>Intro slot at every event in that city.</li>
+              <li>16 passes across the year.</li>
+              <li>Quarterly sponsor report.</li>
+            </ul>
+            <span class="limit">One per city. Renewal priority each year.</span>
+          </div>
+          <div class="tier">
+            <span class="for">One-off</span>
+            <h3>Host a Dinner</h3>
+            <span class="price">CAD 5&ndash;8k all-in<small>Or venue in-kind</small></span>
+            <ul>
+              <li>One dinner, one city, one seat.</li>
+              <li>"Hosted by" on invite, menu and recap.</li>
+              <li>Photo set and a newsletter mention.</li>
+            </ul>
+            <span class="limit">No guest list. Intros only on double opt-in.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RULES + NEVER -->
+  <section id="never">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-path">/foundation/rules</span>
+          <h2>The sponsor rules.</h2>
+        </div>
+        <p>Printed on every agreement. The room's trust is the product; sponsors rent proximity to it, never ownership.</p>
+      </div>
+      <ol class="rules reveal">
+        <li><strong>Stages are never for sale.</strong><span>Sponsors can suggest speakers. Editorial decides. A paid slot gets a 5-minute intro, clearly labelled.</span></li>
+        <li><strong>No attendee lists. Ever.</strong><span>Attendees can opt in to hear from a sponsor, per sponsor, per event. That's the only data that moves.</span></li>
+        <li><strong>Always labelled.</strong><span>"Hosted by" and "Presented by" are shown plainly. No disguised content, no advertorial panels.</span></li>
+        <li><strong>Sponsor seats are capped.</strong><span>One seat at a dinner. No more than about 10% of any room is vendors, sponsors included.</span></li>
+        <li><strong>Category exclusivity at the top only.</strong><span>Titles and founding partners get it. Supporting and community tiers don't.</span></li>
+        <li><strong>Everyone gets a report.</strong><span>Within 7 days: attendance, seniority mix, opt-ins, content reach and photos. Renewals are earned, not assumed.</span></li>
+      </ol>
+
+      <div class="section-head reveal" style="margin-top: clamp(2.8rem, 2rem + 3vw, 4rem);">
+        <div>
+          <span class="section-path">/foundation/never</span>
+          <h2>Who we never take, and why.</h2>
+        </div>
+        <p>Every "no" here protects the reason anyone senior shows up.</p>
+      </div>
+      <div class="nope reveal">
+        <div><h3>Agencies &amp; consultancies</h3><p>They sell services to exactly the people in the room. A sponsored agency turns a dinner into a pitch and makes the whole brand look like someone's funnel. Staying agency-free keeps B2B IRL neutral ground.</p></div>
+        <div><h3>Lead-gen, list sellers &amp; data brokers</h3><p>Their business model is our attendees' contact details. Incompatible by definition.</p></div>
+        <div><h3>Anyone who wants the list</h3><p>If "we need the attendee list" is a condition of the deal, there is no deal, whatever the size of the cheque.</p></div>
+        <div><h3>Pay-to-speak buyers</h3><p>If it's conditional on a keynote, it's advertising dressed as content. The audience can tell, and they stop coming.</p></div>
+        <div><h3>Recruiters at the dinner table</h3><p>Welcome as community partners at chapters. At an intimate CMO dinner they make every guest feel like a target.</p></div>
+        <div><h3>Other event organisers</h3><p>Competing conferences want our audience list and our calendar. Cross-promotion case by case; sponsorship, no.</p></div>
+        <div><h3>Reputation risks</h3><p>Crypto, gambling, tobacco and vaping, and any company in an active public scandal. The brand is borrowed trust, and this spends it fast.</p></div>
+        <div><h3>Sales-rep-only hosts</h3><p>If a sponsor's seat at the table would be an account executive, not a senior leader, the answer is a chapter sponsorship instead.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO SPONSOR -->
+  <section class="alt" id="how">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-path">/foundation/how</span>
+          <h2>How to sponsor, step by step.</h2>
+        </div>
+        <p>From first email to post-event report, in about four to six weeks for a chapter and two for a dinner.</p>
+      </div>
+      <ol class="steps reveal">
+        <li><strong>Say hello</strong><span>Email hello@b2birl.com with "Sponsor" in the subject: who you are, who you sell to, which format interests you.</span></li>
+        <li><strong>Fit call</strong><span>A 20-minute call. We check category, conflicts and the rules above. About half of enquiries get redirected to a better-fit format.</span></li>
+        <li><strong>Pick the format</strong><span>Dinner, chapter tier, workshop tool partner or a bundle. Dates are locked on the calendar.</span></li>
+        <li><strong>One-page agreement</strong><span>Deliverables, rules and price on a single page. 50% on signing, 50% net-30 after the event.</span></li>
+        <li><strong>Co-plan</strong><span>Your intro, your guest nominations (we have final say), your opt-in offer, logistics.</span></li>
+        <li><strong>Report &amp; renew</strong><span>Report within 7 days. A renewal conversation within 30. Renewing sponsors get first pick of dates.</span></li>
+      </ol>
+      <p class="disclaimer">Prospective sponsors can also nominate a guest for a dinner. Nominations are reviewed like any other; a nomination is not a seat.</p>
+    </div>
+  </section>
+
+  <!-- ROSS'S VOICE -->
+  <section id="voice">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-path">/foundation/voice</span>
+          <h2>Every room becomes a point of view.</h2>
+        </div>
+        <p>The events are the source. The content is how it compounds. Ross is the through-line.</p>
+      </div>
+      <div class="flywheel reveal">
+        <div>
+          <span class="from">From the dinners</span>
+          <h3>The monthly column</h3>
+          <ul>
+            <li>"What 18 CMOs told me this month"</li>
+            <li>Unattributed patterns, sharp opinions</li>
+            <li>LinkedIn and the newsletter</li>
+          </ul>
+        </div>
+        <div>
+          <span class="from">From the chapters</span>
+          <h3>The quarterly take</h3>
+          <ul>
+            <li>"State of B2B in Canada" opener</li>
+            <li>Fireside clips and a podcast episode on The Tape</li>
+            <li>10+ pieces of content per event</li>
+          </ul>
+        </div>
+        <div>
+          <span class="from">From the workshops</span>
+          <h3>The playbooks</h3>
+          <ul>
+            <li>Templates built in the room</li>
+            <li>"Ross's picks": the instructors worth following</li>
+            <li>Gated in the newsletter, shared in The Room</li>
+          </ul>
+        </div>
+        <div>
+          <span class="from">From Homecoming</span>
+          <h3>The annual report</h3>
+          <ul>
+            <li>"The State of B2B Marketing, from the Room"</li>
+            <li>Data nobody else has</li>
+            <li>The piece the industry quotes all year</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cols reveal" style="margin-top: clamp(2.2rem, 1.6rem + 2vw, 3rem);">
+        <div class="block">
+          <h3>Why it works for Ross</h3>
+          <p>Thought leadership isn't about having the loudest opinions. It's about having <strong>access nobody else has</strong> and turning it into a point of view. The dinners give Ross the access, the chapters give him a stage in every city, and the content gives him the reach.</p>
+          <p>A year in, he's the person who knows what Canada's B2B marketers are actually thinking, because he's the one who put them in the room.</p>
+        </div>
+        <div class="block">
+          <h3>Where Foundation fits: quietly</h3>
+          <p>B2B IRL stands on its own name. Foundation is not a sponsor on stage, not in the run-of-show, and never pitched at a table. A single line, "B2B IRL is supported by Foundation", lives in the footer, and that's it.</p>
+          <p>That's deliberate. The moment the room smells like a funnel, the senior people leave. The halo lands on Ross because the room is clean, and it reaches the company from there.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROLLOUT -->
+  <section class="alt" id="rollout">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-path">/foundation/rollout</span>
+          <h2>The first 18 months.</h2>
+        </div>
+        <p>Each phase has a gate. No gate, no next phase.</p>
+      </div>
+      <div class="timeline reveal">
+        <div class="phase">
+          <span class="when">Months 1&ndash;3</span>
+          <h3>Prove the table</h3>
+          <ul>
+            <li>3 Toronto dinners, cost-only</li>
+            <li>Build the founding list</li>
+            <li>Sign the first founding partner</li>
+            <li>Recruit the Toronto chapter lead</li>
+          </ul>
+          <span class="gate">Gate: 50+ senior names, show rate above 85%</span>
+        </div>
+        <div class="phase">
+          <span class="when">Months 4&ndash;6</span>
+          <h3>Start the engine</h3>
+          <ul>
+            <li>Toronto City Chapter #1</li>
+            <li>First two workshops</li>
+            <li>Dinners continue monthly, now paid</li>
+            <li>The monthly column goes live</li>
+          </ul>
+          <span class="gate">Gate: chapter breaks even, workshops sell out</span>
+        </div>
+        <div class="phase">
+          <span class="when">Months 7&ndash;9</span>
+          <h3>Second city</h3>
+          <ul>
+            <li>Vancouver chapter lead recruited</li>
+            <li>Dinner rotates to Vancouver</li>
+            <li>Toronto Chapter #2</li>
+            <li>Second founding partner</li>
+          </ul>
+          <span class="gate">Gate: half of sponsors renew</span>
+        </div>
+        <div class="phase">
+          <span class="when">Months 10&ndash;12</span>
+          <h3>Third city</h3>
+          <ul>
+            <li>Montreal (or Halifax) chapter launches</li>
+            <li>Workshops go monthly</li>
+            <li>Homecoming go/no-go decision</li>
+            <li>Open the Homecoming title conversation</li>
+          </ul>
+          <span class="gate">Gate: 3+ chapters live, 2 cycles each</span>
+        </div>
+        <div class="phase">
+          <span class="when">Year 2</span>
+          <h3>Homecoming</h3>
+          <ul>
+            <li>Applications open 6 months out</li>
+            <li>Title plus 5&ndash;8 partners signed</li>
+            <li>300&ndash;400 people, four days</li>
+            <li>First annual report launches on stage</li>
+          </ul>
+          <span class="gate">Gate: sold out via applications</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKIP -->
+  <section id="skip">
+    <div class="wrap">
+      <div class="skip reveal">
+        <div>
+          <span class="section-path">/foundation/skip</span>
+          <p class="big"><s>Big mixers.</s><br><s>Marketing parties.</s><br>Not yet.</p>
+        </div>
+        <div class="block">
+          <h3>Why we skip them for now</h3>
+          <ul>
+            <li><strong>They attract the wrong room.</strong> Open bars pull in vendors and job-seekers; senior marketers leave early and don't come back.</li>
+            <li><strong>They're expensive and forgettable.</strong> The same budget runs four dinners that people talk about for a year.</li>
+            <li><strong>They need a brand to carry them.</strong> A party works when the name on the invite is the draw. That comes after the media brand is strong, not before.</li>
+            <li><strong>They dilute sponsors.</strong> A logo at a loud party is worth less than a seat at a quiet table.</li>
+          </ul>
+          <p style="margin-top:0.9rem">When the time comes, the first one is the Homecoming after-party, and it's invite-only.</p>
+        </div>
+      </div>
+      <p class="disclaimer">All figures are indicative planning numbers in Canadian dollars, to be validated against the first event of each format. Nothing on this page is a confirmed sponsor, partner, date or venue.</p>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="wrap">
+      <div>
+        <h2>Host a dinner. Sponsor a city. Or just get invited.</h2>
+        <p>Dinners start in Toronto. Tell us who you are and which room you belong in.</p>
+      </div>
+      <a class="btn" href="mailto:hello@b2birl.com?subject=B2B%20IRL%20Canada">Get in touch &rarr;</a>
+    </div>
+  </div>
+
+</main>
+
+
+<footer style="position:relative; overflow:hidden;">
+  <span class="stain" style="width:130px; height:130px; bottom:-30px; right:6%;" aria-hidden="true"></span>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="wordmark"><svg class="mark" viewBox="0 0 200 200" role="img" aria-label="B2B IRL"><use href="#b2b-mark"/></svg> B2B IRL</a>
+        <p>Real talk for B2B marketers. No decks required.</p>
+        <span class="due-stamp" style="margin-top:1rem;">Filed &middot; Sept 2026</span>
+      </div>
+      <div class="footer-col">
+        <h4>Content</h4>
+        <ul>
+          <li><a href="newsletter.html">Nisarg's Newsletter</a></li>
+          <li><a href="podcast.html">The Tape</a></li>
+          <li><a href="meetups.html">Meetups</a></li>
+          <li><a href="homecoming.html">Homecoming</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="community.html">The B2B IRL Room</a></li>
+          <li><a href="meetups.html">City chapters</a></li>
+          <li><a href="index.html#join">Founding members</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="almanack.html">The Almanack</a></li>
+          <li><a href="index.html#join">Become a member</a></li>
+          <li><a href="index.html#join">Sponsorship</a></li>
+          <li><a href="community.html">Log in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 B2B IRL. All rights reserved.</span>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>window.TICKER_ITEMS = ["The Canada plan · four formats, one ladder", "Dinner Series · Toronto first", "City Chapters · quarterly", "Workshops · build, don't watch", "Homecoming · year two"];</script>
+<script src="site.js"></script>
+</body>
+</html>
