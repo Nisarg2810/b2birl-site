@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2B IRL: Toronto | 19 March 2027 | Free, invite only</title>
+<meta name="description" content="B2B IRL: Toronto, event no. 03. Friday 19 March 2027. A free, invite-only day of working sessions for B2B marketers. Off the record, operators only.">
+<meta property="og:title" content="B2B IRL: Toronto · 19 March 2027">
+<meta property="og:description" content="Free to attend, invite only. Working sessions for B2B marketers in Toronto. Apply for a seat.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1507992781348-310259076fe0?auto=format&fit=crop&q=70&w=1200&h=630">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+  /* page-specific components for /toronto (self-contained: shared styles.css is untouched) */
+/* ---------- announcement bar ---------- */
+.announce{ display: block; background: var(--highlight); color: #1B1208; text-decoration: none; position: relative; z-index: 21; border-bottom: 1px solid rgba(27,18,8,0.18); }
+.announce .wrap{ display: flex; align-items: center; justify-content: center; gap: 0.55rem 0.9rem; flex-wrap: wrap; padding-block: 0.55rem; font-family: var(--font-mono); font-size: var(--fs-000); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; }
+.announce .live{ display: inline-flex; align-items: center; gap: 0.45em; background: #1B1208; color: var(--highlight); padding: 0.25em 0.6em; border-radius: 999px; }
+.announce .live::before{ content: ""; width: 7px; height: 7px; border-radius: 50%; background: #FF6B45; animation: live-pulse 1.6s ease-in-out infinite; }
+@keyframes live-pulse{ 0%,100%{ opacity: 1; transform: scale(1); } 50%{ opacity: 0.35; transform: scale(0.75); } }
+.announce strong{ font-weight: 600; }
+.announce .sep{ opacity: 0.45; }
+.announce .go{ border-bottom: 1.5px solid currentColor; }
+.announce:hover .go{ color: var(--accent); }
+@media (max-width: 600px){ .announce .hide-sm{ display: none; } }
+
+/* ---------- shared photography (kraft-toned, like prints on a desk) ---------- */
+.photo{ filter: sepia(0.28) saturate(0.82) contrast(1.06) brightness(0.97); }
+
+.strip{ overflow: hidden; padding-block: clamp(2.4rem, 2rem + 2vw, 3.4rem) clamp(2.8rem, 2.2rem + 2vw, 3.8rem); background: var(--paper-2); border-block: 1px solid var(--line); }
+.strip-track{ display: flex; gap: 1.6rem; width: max-content; animation: strip 70s linear infinite; padding-inline: 1rem; }
+.strip:hover .strip-track{ animation-play-state: paused; }
+@keyframes strip{ to{ transform: translateX(-50%); } }
+.polaroid{ background: #FBF6EA; padding: 10px 10px 0; box-shadow: 0 14px 24px -14px rgba(33,29,22,0.5); position: relative; flex-shrink: 0; width: 230px; margin: 0; transition: transform 0.3s ease; }
+:root[data-theme="dark"] .polaroid{ background: #2A2418; }
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .polaroid{ background: #2A2418; } }
+.polaroid img{ display: block; width: 100%; aspect-ratio: 4 / 3.3; object-fit: cover; }
+.polaroid figcaption{ font-family: var(--font-hand); font-size: 1.3rem; color: var(--ink); padding: 0.35rem 0.2rem 0.55rem; line-height: 1.1; }
+.polaroid:nth-child(odd){ transform: rotate(-2.2deg); }
+.polaroid:nth-child(even){ transform: rotate(1.8deg) translateY(10px); }
+.polaroid:nth-child(3n){ transform: rotate(-0.8deg) translateY(-6px); }
+.polaroid:hover{ transform: rotate(0) scale(1.04); z-index: 2; }
+.polaroid .tape{ top: -12px; left: 50%; margin-left: -34px; }
+@media (prefers-reduced-motion: reduce){ .strip-track{ animation: none; } }
+@media (max-width: 600px){ .polaroid{ width: 180px; } }
+
+/* photo cards */
+.portfolio{ display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1rem; }
+.pcard{ position: relative; display: block; aspect-ratio: 3 / 4.2; overflow: hidden; border-radius: 4px; color: #EFE3C6; text-decoration: none; background: #17140D; box-shadow: 0 18px 30px -20px rgba(33,29,22,0.55); }
+.pcard img{ position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.pcard::after{ content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,20,13,0.05) 30%, rgba(23,20,13,0.92) 100%); }
+.pcard:hover img{ transform: scale(1.06); }
+.pcard .in{ position: absolute; left: 0; right: 0; bottom: 0; padding: 1.1rem 1.1rem 1.2rem; z-index: 2; }
+.pcard .n{ font-family: var(--font-mono); font-size: var(--fs-000); letter-spacing: 0.12em; text-transform: uppercase; color: #F2BF1D; }
+.pcard h3{ font-size: var(--fs-500); margin: 0.35rem 0 0.4rem; }
+.pcard p{ font-size: var(--fs-100); opacity: 0.85; line-height: 1.4; }
+.pcard .chip{ position: absolute; top: 0.9rem; left: 0.9rem; z-index: 2; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; background: rgba(23,20,13,0.7); border: 1px solid rgba(239,231,214,0.3); padding: 0.3em 0.6em; border-radius: 999px; }
+@media (max-width: 980px){ .portfolio{ grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 600px){ .portfolio{ grid-template-columns: 1fr; } .pcard{ aspect-ratio: 4 / 3.4; } }
+
+
+  main [id]{ scroll-margin-top: 90px; }
+
+  .ev-hero{ position: relative; min-height: min(92svh, 860px); display: flex; flex-direction: column; color: #EFE3C6; overflow: hidden; background: #17140D; padding: 0; }
+  .ev-hero > img{ position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 45%; transform: scale(1.04); animation: slow-zoom 18s ease-out forwards; }
+  @keyframes slow-zoom{ to{ transform: scale(1); } }
+  .ev-hero::after{ content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,20,13,0.5) 0%, rgba(23,20,13,0.3) 30%, rgba(23,20,13,0.86) 72%, #17140D 100%); }
+  .hero-body{ position: relative; z-index: 2; margin-top: auto; padding-top: clamp(4rem, 3rem + 6vw, 9rem); padding-bottom: clamp(2.4rem, 1.8rem + 3vw, 4rem); width: 100%; }
+  .ev-hero .eyebrow{ color: #F2BF1D; display: block; margin-bottom: 1rem; }
+  .ev-hero h1{ font-size: clamp(3.4rem, 2.2rem + 6vw, 7.4rem); line-height: 0.9; }
+  .ev-hero h1 mark{ background: #F2BF1D; color: #1B1208; padding: 0 0.1em; }
+  .ev-hero .lede{ color: #EFE3C6; opacity: 0.88; font-size: var(--fs-400); max-width: 46ch; margin-top: 1.2rem; }
+  .hero-row{ display: grid; grid-template-columns: minmax(0,1fr) minmax(280px, 380px); gap: clamp(1.6rem, 1rem + 3vw, 4rem); align-items: end; }
+  .hero-cta{ display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1.6rem; }
+  .ev-hero .btn{ background: #F2BF1D; color: #1B1208; border-color: #F2BF1D; }
+  .ev-hero .btn.ghost{ background: transparent; color: #EFE3C6; border-color: rgba(239,227,198,0.6); }
+  .ev-hero .btn:hover{ background: #FF6B45; border-color: #FF6B45; color: #1B1208; }
+  .hero-stamp{ position: absolute; right: clamp(1rem, 4vw, 4rem); top: 2rem; width: clamp(90px, 10vw, 140px); color: #EFE3C6; opacity: 0.8; z-index: 2; transform: rotate(8deg); }
+
+  .countdown{ display: flex; gap: 0.6rem; margin-top: 1.8rem; }
+  .countdown > div{ min-width: 72px; border: 1px solid rgba(239,227,198,0.35); background: rgba(23,20,13,0.45); backdrop-filter: blur(3px); border-radius: 4px; padding: 0.55rem 0.7rem 0.5rem; text-align: center; }
+  .countdown .v{ display: block; font-family: var(--font-display); font-weight: 900; font-size: clamp(1.8rem, 1.4rem + 1.6vw, 2.6rem); line-height: 1; font-variant-numeric: tabular-nums; }
+  .countdown .k{ display: block; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; margin-top: 0.3rem; }
+
+  .pass{ position: relative; background: #EFE7D6; color: #211D16; border: 1px solid #CBBFA0; border-radius: 6px; padding: 1.3rem 1.4rem 1.4rem; transform: rotate(1.6deg); box-shadow: 0 24px 40px -20px rgba(0,0,0,0.6); }
+  .pass .pin{ top: -7px; left: 36px; }
+  .pass-top{ display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: var(--fs-000); letter-spacing: 0.14em; text-transform: uppercase; color: #C7351E; border-bottom: 1px dashed #CBBFA0; padding-bottom: 0.7rem; }
+  .pass h2{ font-size: clamp(2.4rem, 2rem + 1.6vw, 3.2rem); margin: 0.8rem 0 0.6rem; }
+  .pass dl{ margin: 0; display: grid; gap: 0.45rem; }
+  .pass dl div{ display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px solid rgba(203,191,160,0.6); padding-bottom: 0.4rem; }
+  .pass dt{ font-family: var(--font-mono); font-size: var(--fs-000); letter-spacing: 0.1em; text-transform: uppercase; color: #5B5546; }
+  .pass dd{ margin: 0; font-size: var(--fs-200); text-align: right; font-weight: 600; }
+  .pass-stamp{ position: absolute; right: 1rem; bottom: -1rem; font-family: var(--font-mono); font-weight: 600; font-size: var(--fs-000); letter-spacing: 0.14em; text-transform: uppercase; color: #C7351E; border: 2px solid #C7351E; padding: 0.35em 0.7em; transform: rotate(-7deg); background: #EFE7D6; }
+  .pass .note{ position: absolute; left: 0; bottom: -2.6rem; font-family: var(--font-hand); font-size: 1.35rem; color: #F2BF1D; transform: rotate(-3deg); white-space: nowrap; }
+
+  .numbers{ background: var(--ink); color: var(--paper); }
+  .numbers .wrap{ padding-block: clamp(2rem, 1.6rem + 2vw, 3rem); }
+  .num-grid{ display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); }
+  .num{ padding: 0.4rem 1rem; border-right: 1px solid rgba(239,231,214,0.18); }
+  .num:first-child{ padding-left: 0; }
+  .num:last-child{ border-right: none; }
+  .num .v{ font-family: var(--font-display); font-weight: 900; font-size: clamp(2.2rem, 1.8rem + 2vw, 3.6rem); line-height: 0.9; display: block; }
+  .num .v em{ font-style: normal; color: var(--highlight); }
+  .num .k{ font-family: var(--font-mono); font-size: var(--fs-000); letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.72; display: block; margin-top: 0.6rem; }
+  :root[data-theme="dark"] .num{ border-right-color: rgba(23,20,13,0.25); }
+
+  .rules-grid{ display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1rem; }
+  .rule{ background: var(--paper-2); border: 1px solid var(--line); border-top: 3px solid var(--ink); padding: 1.2rem 1.2rem 1.4rem; }
+  .rule:nth-child(even){ transform: translateY(14px); }
+  .rule .n, .step .n{ font-family: var(--font-mono); font-size: var(--fs-000); letter-spacing: 0.12em; color: var(--accent); }
+  .rule h3{ font-size: var(--fs-500); margin: 0.5rem 0 0.6rem; }
+  .rule p{ color: var(--ink-soft); font-size: var(--fs-200); }
+
+  .runsheet{ list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .runsheet li{ display: grid; grid-template-columns: 160px minmax(0,1fr); gap: 1.5rem; padding: 1.2rem 0; border-bottom: 1px solid var(--line); }
+  .runsheet .t{ font-family: var(--font-mono); font-size: var(--fs-100); letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); padding-top: 0.3rem; }
+  .runsheet h3{ font-size: var(--fs-500); }
+  .runsheet p{ color: var(--ink-soft); font-size: var(--fs-200); margin-top: 0.3rem; }
+
+  .who-grid{ display: grid; grid-template-columns: minmax(0,0.85fr) minmax(0,1.15fr); gap: clamp(2rem, 1.5rem + 2vw, 4rem); align-items: center; }
+  .city{ position: relative; margin: 0; }
+  .city img{ display: block; width: 100%; aspect-ratio: 4 / 4.6; object-fit: cover; border-radius: 4px; box-shadow: 0 22px 40px -26px rgba(33,29,22,0.6); }
+  .city figcaption{ position: absolute; left: -0.8rem; bottom: 1.4rem; background: var(--paper); border: 1px solid var(--line); font-family: var(--font-mono); font-size: var(--fs-000); letter-spacing: 0.1em; text-transform: uppercase; padding: 0.5em 0.8em; transform: rotate(-3deg); }
+  .city .doodle-label{ position: absolute; top: -2rem; right: 0.5rem; transform: rotate(4deg); }
+  .who-h{ font-size: var(--fs-600); margin: 0.4rem 0 1.4rem; }
+  .who-cols{ display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; }
+  .who-cols h3{ font-family: var(--font-mono); font-size: var(--fs-100); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; margin-bottom: 0.8rem; }
+  .who-cols ul{ list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; }
+  .who-cols li{ position: relative; padding-left: 1.6rem; font-size: var(--fs-200); color: var(--ink-soft); }
+  .who-cols li::before{ position: absolute; left: 0; top: -0.05rem; font-family: var(--font-hand); font-size: 1.4rem; line-height: 1; }
+  .who-cols .yes li::before{ content: "\2713"; color: var(--pen); }
+  .who-cols .no li::before{ content: "\2717"; color: var(--accent); }
+
+  .steps-row{ display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1rem; counter-reset: s; }
+  .step{ border: 1px dashed var(--line); border-radius: 6px; padding: 1.2rem; position: relative; }
+  .step .n{ display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; border: 1.5px solid var(--accent); font-size: var(--fs-100); }
+  .step h3{ font-size: var(--fs-500); margin: 0.8rem 0 0.4rem; }
+  .step p{ color: var(--ink-soft); font-size: var(--fs-200); }
+
+  .apply-band{ position: relative; background: #17140D; color: #EFE3C6; overflow: hidden; }
+  .apply-band > img{ position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.28; }
+  .apply-band .wrap{ position: relative; z-index: 1; }
+  .apply-grid{ display: grid; grid-template-columns: minmax(0,0.9fr) minmax(0,1.1fr); gap: clamp(2rem, 1.5rem + 2vw, 4rem); align-items: start; }
+  .apply-copy .eyebrow{ color: #F2BF1D; }
+  .apply-copy h2{ font-size: var(--fs-600); margin: 0.8rem 0 1rem; max-width: 12ch; }
+  .apply-copy p{ opacity: 0.86; max-width: 40ch; }
+  .apply-copy .small{ font-family: var(--font-mono); font-size: var(--fs-000); letter-spacing: 0.04em; margin-top: 1.2rem; opacity: 0.7; }
+  .apply-form{ background: #EFE7D6; color: #211D16; border-radius: 6px; padding: clamp(1.2rem, 1rem + 1vw, 1.8rem); display: grid; gap: 0.9rem; box-shadow: 0 24px 40px -22px rgba(0,0,0,0.7); }
+  .apply-form .field-row{ display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+  .apply-form label{ display: grid; gap: 0.35rem; font-family: var(--font-mono); font-size: var(--fs-000); letter-spacing: 0.08em; text-transform: uppercase; color: #5B5546; }
+  .apply-form input:not([type="checkbox"]), .apply-form textarea{ font: inherit; font-family: var(--font-body); font-size: var(--fs-200); letter-spacing: 0; text-transform: none; color: #211D16; background: #FBF6EA; border: 1px solid #CBBFA0; border-radius: 3px; padding: 0.65em 0.75em; width: 100%; }
+  .apply-form textarea{ resize: vertical; }
+  .apply-form [aria-invalid="true"]{ border-color: #C7351E; }
+  .apply-form fieldset{ border: 1px solid #CBBFA0; border-radius: 3px; padding: 0.7rem 0.9rem 0.8rem; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .apply-form legend{ font-family: var(--font-mono); font-size: var(--fs-000); letter-spacing: 0.08em; text-transform: uppercase; color: #5B5546; padding: 0 0.3rem; }
+  .apply-form .check{ display: flex; align-items: center; gap: 0.5rem; font-family: var(--font-body); font-size: var(--fs-200); letter-spacing: 0; text-transform: none; color: #211D16; }
+  .apply-form .check input{ accent-color: #C7351E; width: 16px; height: 16px; }
+  .apply-form .btn{ justify-self: start; background: #211D16; color: #EFE7D6; border-color: #211D16; }
+  .apply-form .btn:hover{ background: #C7351E; border-color: #C7351E; color: #FBF3DF; }
+  .form-note{ font-family: var(--font-mono); font-size: var(--fs-000); color: #5B5546; letter-spacing: 0.03em; }
+  .form-note.ok{ color: #2A4D8F; font-weight: 600; }
+  .form-note.err{ color: #C7351E; font-weight: 600; }
+
+  .hosts{ display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; border: 1px solid var(--line); background: var(--paper-2); border-radius: 6px; padding: clamp(1.4rem, 1rem + 2vw, 2.4rem); }
+  .hosts h2{ font-size: var(--fs-600); margin: 0.4rem 0 0.6rem; }
+  .hosts p{ color: var(--ink-soft); max-width: 52ch; }
+
+  .mosaic{ display: grid; grid-template-columns: 1.6fr 1fr; gap: 1rem; }
+  .mosaic figure{ position: relative; margin: 0; overflow: hidden; border-radius: 4px; box-shadow: 0 18px 30px -22px rgba(33,29,22,0.55); }
+  .mosaic img{ display: block; width: 100%; height: clamp(220px, 26vw, 360px); object-fit: cover; transition: transform 0.6s ease; }
+  .mosaic figure:hover img{ transform: scale(1.04); }
+  .mosaic figure:nth-child(3){ grid-column: 1 / 2; grid-row: 2; }
+  .mosaic figure:nth-child(2){ grid-column: 2; grid-row: 1; }
+  .mosaic figure:nth-child(4){ grid-column: 2; grid-row: 2; }
+  .mosaic figure:nth-child(3), .mosaic figure:nth-child(2){ }
+  .mosaic figcaption{ position: absolute; left: 0.8rem; bottom: 0.8rem; background: rgba(23,20,13,0.75); color: #EFE3C6; font-family: var(--font-mono); font-size: var(--fs-000); letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4em 0.7em; border-radius: 3px; }
+
+  .faq{ border-top: 1px solid var(--line); max-width: 860px; }
+  .faq details{ border-bottom: 1px solid var(--line); }
+  .faq summary{ cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 1rem; padding: 1.1rem 0; font-family: var(--font-display); font-weight: 800; font-size: var(--fs-500); line-height: 1.1; }
+  .faq summary::-webkit-details-marker{ display: none; }
+  .faq summary::after{ content: "+"; font-family: var(--font-mono); color: var(--accent); transition: transform 0.2s ease; }
+  .faq details[open] summary::after{ transform: rotate(45deg); }
+  .faq details p{ color: var(--ink-soft); padding: 0 0 1.2rem; max-width: 64ch; }
+
+  @media (prefers-reduced-motion: reduce){ .ev-hero > img{ animation: none; transform: none; } }
+  @media (max-width: 980px){
+    .hero-row, .who-grid, .apply-grid{ grid-template-columns: 1fr; }
+    .pass{ max-width: 420px; margin-bottom: 2.4rem; }
+    .rules-grid, .steps-row{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .rule:nth-child(even){ transform: none; }
+    .num-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); row-gap: 1.2rem; }
+    .num{ border-right: none; padding-left: 0; }
+    .hero-stamp{ display: none; }
+  }
+  @media (max-width: 600px){
+    .rules-grid, .steps-row, .who-cols, .apply-form .field-row, .apply-form fieldset{ grid-template-columns: 1fr; }
+    .runsheet li{ grid-template-columns: 1fr; gap: 0.3rem; }
+    .countdown > div{ min-width: 0; flex: 1; }
+    .mosaic{ grid-template-columns: 1fr; }
+    .mosaic figure:nth-child(n){ grid-column: auto; grid-row: auto; }
+    .apply-form .btn{ justify-self: stretch; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <filter id="ink-distress" x="-30%" y="-30%" width="160%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2"/>
+    </filter>
+  </defs>
+  <symbol id="b2b-mark" viewBox="0 0 200 200">
+    <g transform="rotate(-3 100 100)" filter="url(#ink-distress)">
+      <circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="1 9" stroke-linecap="round"/>
+      <circle cx="100" cy="100" r="76" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      <text x="100" y="90" text-anchor="middle" font-family="'Big Shoulders Display', 'Arial Narrow', sans-serif" font-weight="900" font-size="36" letter-spacing="1" fill="currentColor">B2B</text>
+      <line x1="60" y1="108" x2="140" y2="108" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 5"/>
+      <circle cx="60" cy="108" r="3" fill="currentColor"/>
+      <circle cx="140" cy="108" r="3" fill="currentColor"/>
+      <text x="100" y="140" text-anchor="middle" font-family="'Big Shoulders Display', 'Arial Narrow', sans-serif" font-weight="900" font-size="36" letter-spacing="2" fill="currentColor">IRL</text>
+    </g>
+  </symbol>
+  <symbol id="icon-memo" viewBox="0 0 40 40">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#ink-distress)">
+      <path d="M5,11 L4.5,29.5 L36,30 L36.5,10.5 Z"/>
+      <path d="M5,11.5 C10,16 17,22.5 20,22.5 C23,22.5 30,16 36,10.5"/>
+    </g>
+  </symbol>
+  <symbol id="icon-room" viewBox="0 0 40 40">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#ink-distress)">
+      <path d="M6,9 Q5.5,4.5 10,4.5 L30.5,4 Q34.5,4.5 34.5,9 L34,20 Q34.5,24 30,24 L14.5,24.5 L8.5,31 L9.5,24.5 L10,24.5 Q6,24.5 6,20 Z"/>
+    </g>
+  </symbol>
+  <symbol id="icon-tape" viewBox="0 0 40 40">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#ink-distress)">
+      <rect x="4.5" y="9" width="31" height="21" rx="2.5"/>
+      <circle cx="13.5" cy="19.5" r="5"/>
+      <circle cx="26.5" cy="19.5" r="5"/>
+      <circle cx="13.5" cy="19.5" r="1.4" fill="currentColor"/>
+      <circle cx="26.5" cy="19.5" r="1.4" fill="currentColor"/>
+      <path d="M10.5,26.5 L29.5,27"/>
+    </g>
+  </symbol>
+  <symbol id="icon-meetup" viewBox="0 0 40 40">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#ink-distress)">
+      <path d="M20,5 C13,5 7,10.5 7,17.5 C7,27 20,36 20,36 C20,36 33,27 33,17.5 C33,10.5 27,5 20,5 Z"/>
+      <circle cx="20" cy="17" r="5.5"/>
+    </g>
+  </symbol>
+  <symbol id="icon-ticket" viewBox="0 0 40 40">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#ink-distress)">
+      <path d="M5,14 C5,11.5 7,11.5 7,9 C7,6.5 5,6.5 5,4 L35,4 C35,6.5 33,6.5 33,9 C33,11.5 35,11.5 35,14 L35,26 C35,28.5 33,28.5 33,31 C33,33.5 35,33.5 35,36 L5,36 C5,33.5 7,33.5 7,31 C7,28.5 5,28.5 5,26 Z"/>
+      <path d="M20,4 L20,36" stroke-dasharray="3 4"/>
+    </g>
+  </symbol>
+  <symbol id="icon-book" viewBox="0 0 40 40">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#ink-distress)">
+      <path d="M20,9 C17,6.5 10,5.5 5,6.5 L5,30 C10,29 17,30 20,32.5 C23,30 30,29 35,30 L35,6.5 C30,5.5 23,6.5 20,9 Z"/>
+      <path d="M20,9 L20,32.5"/>
+    </g>
+  </symbol>
+  <symbol id="icon-clip" viewBox="0 0 30 60">
+    <path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" d="M10,10 C10,4.5 20,4.5 20,10 L20,44 C20,49 12.5,49 12.5,44 L12.5,17.5 C12.5,14.5 16.5,14.5 16.5,17.5 L16.5,38" filter="url(#ink-distress)"/>
+  </symbol>
+</svg>
+
+<div class="grain" aria-hidden="true"></div>
+
+<a class="announce" href="#apply">
+  <div class="wrap">
+    <span class="live">Applications open</span>
+    <strong>B2B IRL: Toronto &middot; 19 March</strong>
+    <span class="sep hide-sm">/</span>
+    <span class="hide-sm">Free to attend &middot; Invite only</span>
+    <span class="go">Apply for a seat &rarr;</span>
+  </div>
+</a>
+
+<header>
+  <nav class="wrap nav">
+    <a href="index.html" class="wordmark"><svg class="mark" viewBox="0 0 200 200" role="img" aria-label="B2B IRL"><use href="#b2b-mark"/></svg> B2B IRL <span>ADMIT ONE</span></a>
+    <ul class="nav-links">
+      <li><a href="community.html">The Room</a></li>
+      <li><a href="newsletter.html">Newsletter</a></li>
+      <li><a href="podcast.html">The Tape</a></li>
+      <li><a href="meetups.html">Meetups</a></li>
+      <li><a href="almanack.html">Almanack</a></li>
+      <li><a href="homecoming.html">Homecoming</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a class="login" href="community.html">Log in</a>
+      <a class="btn" href="newsletter.html">Join free</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="navToggle">Menu</button>
+  </nav>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<main>
+  <!-- HERO -->
+  <section class="ev-hero">
+    <img class="photo" src="https://images.unsplash.com/photo-1507992781348-310259076fe0?auto=format&fit=crop&q=70&w=2000" alt="The Toronto skyline and the CN Tower across Lake Ontario at sunset" fetchpriority="high">
+    <svg class="hero-stamp" viewBox="0 0 200 200" aria-hidden="true"><use href="#b2b-mark"/></svg>
+    <div class="wrap hero-body">
+      <div class="hero-row">
+        <div>
+          <span class="eyebrow rise">Event no. 03 &middot; Toronto &middot; Fri, 19 Mar 2027</span>
+          <h1 class="rise-2">B2B IRL: <mark>Toronto</mark>.</h1>
+          <p class="lede rise-3">One day, one room, and the B2B marketers who actually run the work. Working sessions instead of keynotes, real numbers instead of polished case studies, and nothing on the record.</p>
+          <div class="hero-cta rise-3">
+            <a class="btn" href="#apply">Apply for a seat &rarr;</a>
+            <a class="btn ghost" href="#how">How selection works</a>
+          </div>
+          <div class="countdown rise-3" id="countdown" aria-label="Countdown to 19 March 2027">
+            <div><span class="v" data-unit="d">--</span><span class="k">Days</span></div>
+            <div><span class="v" data-unit="h">--</span><span class="k">Hours</span></div>
+            <div><span class="v" data-unit="m">--</span><span class="k">Mins</span></div>
+            <div><span class="v" data-unit="s">--</span><span class="k">Secs</span></div>
+          </div>
+        </div>
+        <div class="pass rise-3">
+          <span class="pin"></span>
+          <div class="pass-top"><span>Admit one</span><span>No. 03</span></div>
+          <h2>Toronto</h2>
+          <dl>
+            <div><dt>Date</dt><dd>Fri, 19 Mar 2027</dd></div>
+            <div><dt>City</dt><dd>Toronto, Canada</dd></div>
+            <div><dt>Cost</dt><dd>Free to attend</dd></div>
+            <div><dt>Entry</dt><dd>Invite only</dd></div>
+            <div><dt>Venue</dt><dd>Shared with selected guests</dd></div>
+          </dl>
+          <span class="pass-stamp">By invitation</span>
+          <span class="note">free, but you have to get picked &darr;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACTS -->
+  <div class="numbers">
+    <div class="wrap">
+      <div class="num-grid">
+        <div class="num reveal" style="--i:0"><span class="v"><em>19</em>.03</span><span class="k">Friday, in Toronto</span></div>
+        <div class="num reveal" style="--i:1"><span class="v">$<em>0</em></span><span class="k">Free to attend</span></div>
+        <div class="num reveal" style="--i:2"><span class="v"><em>1</em> room</span><span class="k">Selected guests only</span></div>
+        <div class="num reveal" style="--i:3"><span class="v"><em>0</em></span><span class="k">Recordings. It's off the record</span></div>
+        <div class="num reveal" style="--i:4"><span class="v"><em>0</em></span><span class="k">Vendor pitches from the stage</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHOTO STRIP -->
+  <div class="strip" aria-hidden="true">
+    <div class="strip-track">
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1543962226-818f4301073f?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>Toronto, after dark</figcaption></figure>
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>one long table</figcaption></figure>
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>downtown, golden hour</figcaption></figure>
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>no vendor keynotes</figcaption></figure>
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1569982615761-66697da68502?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>19 March</figcaption></figure>
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>laptops open</figcaption></figure>
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>invite only</figcaption></figure>
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>real numbers only</figcaption></figure>
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1603466184840-715063d3e1e3?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>by the lake</figcaption></figure>
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>ask the room</figcaption></figure>
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1543962226-818f4301073f?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>Toronto, after dark</figcaption></figure>
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>one long table</figcaption></figure>
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>downtown, golden hour</figcaption></figure>
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>no vendor keynotes</figcaption></figure>
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1569982615761-66697da68502?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>19 March</figcaption></figure>
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>laptops open</figcaption></figure>
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>invite only</figcaption></figure>
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>real numbers only</figcaption></figure>
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1603466184840-715063d3e1e3?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>by the lake</figcaption></figure>
+      <figure class="polaroid"><span class="tape"></span><img class="photo" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=70&w=460&h=380" alt="" loading="lazy"><figcaption>ask the room</figcaption></figure>
+    </div>
+  </div>
+
+  <!-- PRINCIPLES -->
+  <section id="different">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-path">/toronto/why</span>
+          <h2>Not another marketing conference.</h2>
+        </div>
+        <p>Most events are built for the stage. This one is built for the people in the room.</p>
+      </div>
+      <div class="rules-grid">
+        <div class="rule reveal" style="--i:0"><span class="n">01</span><h3>Working sessions over presentations</h3><p>Small groups, a whiteboard and a real problem. You leave with something you can use on Monday.</p></div>
+        <div class="rule reveal" style="--i:1"><span class="n">02</span><h3>Real numbers over highlight reels</h3><p>What it cost, what broke, what you'd do differently. The version that never makes it into a case study.</p></div>
+        <div class="rule reveal" style="--i:2"><span class="n">03</span><h3>Off the record</h3><p>No recordings, no livestream, no quotes without permission. People say more when nobody's filming.</p></div>
+        <div class="rule reveal" style="--i:3"><span class="n">04</span><h3>Operators, not pundits</h3><p>Every voice in the room has run the campaign, owned the number or built the team. Nobody is there to sell to you.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRACKS -->
+  <section class="alt" id="tracks">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-path">/toronto/tracks</span>
+          <h2>What we'll dig into.</h2>
+        </div>
+        <p>Four tracks, each run as a hands-on session. You pick the two that matter most to you when you apply.</p>
+      </div>
+      <div class="portfolio">
+        <div class="pcard reveal" style="--i:0">
+          <img class="photo" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=70&w=700&h=980" alt="" loading="lazy">
+          <span class="chip">Track 01</span>
+          <span class="in"><span class="n">Demand &amp; pipeline</span><h3>Pipeline that holds up</h3><p>Demand gen, ABM and attribution that survives a board meeting.</p></span>
+        </div>
+        <div class="pcard reveal" style="--i:1">
+          <img class="photo" src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?auto=format&fit=crop&crop=right&q=70&w=700&h=980" alt="" loading="lazy">
+          <span class="chip">Track 02</span>
+          <span class="in"><span class="n">Brand &amp; positioning</span><h3>Being remembered</h3><p>Positioning, category and brand for B2B buyers who all sound the same.</p></span>
+        </div>
+        <div class="pcard reveal" style="--i:2">
+          <img class="photo" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=70&w=700&h=980" alt="" loading="lazy">
+          <span class="chip">Track 03</span>
+          <span class="in"><span class="n">AI in GTM</span><h3>AI, applied</h3><p>Workflows teams are actually running for content, research and outbound.</p></span>
+        </div>
+        <div class="pcard reveal" style="--i:3">
+          <img class="photo" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=70&w=700&h=980" alt="" loading="lazy">
+          <span class="chip">Track 04</span>
+          <span class="in"><span class="n">Founder-led &amp; community</span><h3>Selling from Canada to the world</h3><p>Founder-led marketing, community and winning US buyers from Toronto.</p></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RUN OF DAY -->
+  <section id="agenda">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-path">/toronto/agenda</span>
+          <h2>The shape of the day.</h2>
+        </div>
+        <p>The full agenda and session hosts go to selected guests first. Here's how the day runs.</p>
+      </div>
+      <ol class="runsheet">
+        <li class="reveal" style="--i:0"><span class="t">Morning</span><div><h3>Arrivals, coffee and introductions</h3><p>Name tags with what you're working on, not just your title.</p></div></li>
+        <li class="reveal" style="--i:1"><span class="t">Session 1</span><div><h3>Opening conversation</h3><p>One honest fireside with an operator about what actually worked, and what didn't.</p></div></li>
+        <li class="reveal" style="--i:2"><span class="t">Session 2</span><div><h3>Working sessions: tracks 01 and 02</h3><p>Small tables, one problem each, a host who has solved it before.</p></div></li>
+        <li class="reveal" style="--i:3"><span class="t">Midday</span><div><h3>Long-table lunch</h3><p>Seating is planned so you meet the people you should meet.</p></div></li>
+        <li class="reveal" style="--i:4"><span class="t">Session 3</span><div><h3>Working sessions: tracks 03 and 04</h3><p>Same format. Bring your laptop, leave with something built.</p></div></li>
+        <li class="reveal" style="--i:5"><span class="t">Evening</span><div><h3>Ask the room, then drinks</h3><p>Open-floor questions you can't post on LinkedIn, then the conversations that keep going.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- WHO -->
+  <section class="alt" id="who">
+    <div class="wrap">
+      <div class="who-grid">
+        <figure class="city reveal">
+          <span class="doodle-label">city no. 3 &darr;</span>
+          <img class="photo" src="https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&fit=crop&q=70&w=900&h=1040" alt="Aerial view of downtown Toronto and the waterfront at golden hour" loading="lazy">
+          <figcaption>Downtown &middot; Toronto</figcaption>
+        </figure>
+        <div class="reveal" style="--i:1">
+          <span class="section-path">/toronto/who</span>
+          <h2 class="who-h">Who's in the room.</h2>
+          <div class="who-cols">
+            <div>
+              <h3>For you if</h3>
+              <ul class="yes">
+                <li>You lead or do hands-on B2B marketing: demand gen, PMM, brand, content, growth or RevOps.</li>
+                <li>You're a founder doing the marketing yourself.</li>
+                <li>You'll share what's working (and what isn't) with real numbers.</li>
+                <li>You'd rather leave with a plan than a tote bag.</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Not for</h3>
+              <ul class="no">
+                <li>Selling services or tools to attendees.</li>
+                <li>Agencies on a lead-gen mission.</li>
+                <li>Collecting contacts for a list.</li>
+                <li>Anyone planning to record or post the sessions.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW SELECTION WORKS -->
+  <section id="how">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-path">/toronto/how</span>
+          <h2>Free, but invite only.</h2>
+        </div>
+        <p>There are no tickets to buy. Every seat goes to someone we've picked, so the room stays useful for everyone in it.</p>
+      </div>
+      <div class="steps-row">
+        <div class="step reveal" style="--i:0"><span class="n">1</span><h3>Apply</h3><p>Two minutes. Tell us who you are and what you'd bring to the room.</p></div>
+        <div class="step reveal" style="--i:1"><span class="n">2</span><h3>We review</h3><p>Applications are read by a person, in batches. We're building a mix of roles, stages and companies.</p></div>
+        <div class="step reveal" style="--i:2"><span class="n">3</span><h3>You get an invite</h3><p>Selected guests get a personal invite with the venue, the agenda and the session hosts.</p></div>
+        <div class="step reveal" style="--i:3"><span class="n">4</span><h3>Show up</h3><p>Confirm your seat and come ready to talk. If plans change, tell us so someone else can have it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLY -->
+  <section class="apply-band" id="apply">
+    <img class="photo" src="https://images.unsplash.com/photo-1543962226-818f4301073f?auto=format&fit=crop&q=70&w=1800" alt="" loading="lazy">
+    <div class="wrap">
+      <div class="apply-grid">
+        <div class="apply-copy">
+          <span class="eyebrow">Applications open &middot; seats are limited</span>
+          <h2>Apply for a seat in Toronto.</h2>
+          <p>Free to attend. Every application is read, and selected guests hear back by email with a personal invite.</p>
+          <p class="small">Got an invite from us already? Reply to that email to confirm. No need to apply.</p>
+        </div>
+        <form class="apply-form" id="applyForm" novalidate>
+          <div class="field-row">
+            <label>Full name<input name="name" required autocomplete="name"></label>
+            <label>Work email<input name="email" type="email" required autocomplete="email"></label>
+          </div>
+          <div class="field-row">
+            <label>Company<input name="company" required autocomplete="organization"></label>
+            <label>Role<input name="role" required autocomplete="organization-title" placeholder="e.g. Head of Demand Gen"></label>
+          </div>
+          <label>LinkedIn profile<input name="linkedin" type="url" placeholder="https://linkedin.com/in/..."></label>
+          <fieldset>
+            <legend>Tracks you care about most</legend>
+            <label class="check"><input type="checkbox" name="track" value="Demand & pipeline"> Demand &amp; pipeline</label>
+            <label class="check"><input type="checkbox" name="track" value="Brand & positioning"> Brand &amp; positioning</label>
+            <label class="check"><input type="checkbox" name="track" value="AI in GTM"> AI in GTM</label>
+            <label class="check"><input type="checkbox" name="track" value="Founder-led & community"> Founder-led &amp; community</label>
+          </fieldset>
+          <label>What would you bring to the room?<textarea name="bring" rows="3" required placeholder="A campaign, a lesson, a number you're proud of (or not)."></textarea></label>
+          <button class="btn" type="submit">Send my application &rarr;</button>
+          <p class="form-note" id="applyNote">This opens your email app with your application filled in. Hit send and you're in the queue.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOSTS -->
+  <section id="hosts">
+    <div class="wrap">
+      <div class="hosts reveal">
+        <div>
+          <span class="section-path">/toronto/hosts</span>
+          <h2>Session hosts announced soon.</h2>
+          <p>Operators only. If you know someone in Toronto who has done the work and would tell the room the honest version, introduce us.</p>
+        </div>
+        <a class="btn ghost" href="mailto:hello@b2birl.com?subject=Host%20nomination%3A%20B2B%20IRL%20Toronto">Nominate a host &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CITY PHOTOS -->
+  <section class="alt" id="city">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-path">/toronto/city</span>
+          <h2>Why Toronto.</h2>
+        </div>
+        <p>Where B2B IRL started, and Canada's biggest B2B tech hub. Most marketers here sell into the US; this is the room where they compare notes.</p>
+      </div>
+      <div class="mosaic">
+        <figure class="reveal" style="--i:0"><img class="photo" src="https://images.unsplash.com/photo-1569982615761-66697da68502?auto=format&fit=crop&q=70&w=1200&h=760" alt="Toronto seen from the air across Lake Ontario" loading="lazy"><figcaption>Lake Ontario</figcaption></figure>
+        <figure class="reveal" style="--i:1"><img class="photo" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&q=70&w=700&h=760" alt="Toronto skyscrapers and the CN Tower lit up at dusk" loading="lazy"><figcaption>Financial District</figcaption></figure>
+        <figure class="reveal" style="--i:2"><img class="photo" src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&q=70&w=700&h=760" alt="Friends talking over dinner at a crowded table" loading="lazy"><figcaption>the long table</figcaption></figure>
+        <figure class="reveal" style="--i:3"><img class="photo" src="https://images.unsplash.com/photo-1768876041606-2b628683ce3c?auto=format&fit=crop&q=70&w=1200&h=760" alt="The CN Tower and the Toronto skyline over blue water" loading="lazy"><figcaption>CN Tower</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-path">/toronto/faq</span>
+          <h2>Questions.</h2>
+        </div>
+        <p>Anything else: <a href="mailto:hello@b2birl.com?subject=B2B%20IRL%20Toronto">hello@b2birl.com</a></p>
+      </div>
+      <div class="faq">
+        <details><summary>Is it really free?</summary><p>Yes. There's no ticket price. Seats are limited, so attendance is by application or invite only.</p></details>
+        <details><summary>When and where is it?</summary><p>Friday, 19 March 2027, in Toronto. The exact venue and timings go to selected guests with their invite.</p></details>
+        <details><summary>How are guests selected?</summary><p>A person reads every application. We look for hands-on B2B marketers and founders who'll share openly, and we balance the room across roles, company stages and industries.</p></details>
+        <details><summary>When will I hear back?</summary><p>We review in batches and email selected guests directly. If the room fills before we reach you, we'll let you know and keep you first in line for the next one.</p></details>
+        <details><summary>Can I bring a colleague?</summary><p>Invites are personal and can't be transferred. Your colleague is welcome to apply on their own.</p></details>
+        <details><summary>Will sessions be recorded?</summary><p>No. Everything is off the record. Nothing gets quoted or shared without the speaker's permission.</p></details>
+        <details><summary>I sell to marketers. Can I attend?</summary><p>Not as a guest. If you'd like to support the event, write to us about partnering. Partners don't pitch from the stage.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <div class="promo-strip">
+    <div class="wrap">
+      <span class="label">B2B IRL: Toronto &middot; <strong>Fri, 19 March &middot; free, invite only</strong></span>
+      <a class="btn" href="#apply">Apply for a seat &rarr;</a>
+    </div>
+  </div>
+</main>
+
+<footer style="position:relative; overflow:hidden;">
+  <span class="stain" style="width:130px; height:130px; bottom:-30px; right:6%;" aria-hidden="true"></span>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="wordmark"><svg class="mark" viewBox="0 0 200 200" role="img" aria-label="B2B IRL"><use href="#b2b-mark"/></svg> B2B IRL</a>
+        <p>Real talk for B2B marketers. No decks required.</p>
+        <span class="due-stamp" style="margin-top:1rem;">Filed &middot; Sept 2026</span>
+      </div>
+      <div class="footer-col">
+        <h4>Content</h4>
+        <ul>
+          <li><a href="newsletter.html">Nisarg's Newsletter</a></li>
+          <li><a href="podcast.html">The Tape</a></li>
+          <li><a href="meetups.html">Meetups</a></li>
+          <li><a href="homecoming.html">Homecoming</a></li>
+          <li><a href="mumbai.html">B2B IRL: Mumbai</a></li>
+          <li><a href="bengaluru.html">B2B IRL: Bengaluru</a></li>
+          <li><a href="toronto.html">B2B IRL: Toronto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="community.html">The B2B IRL Room</a></li>
+          <li><a href="meetups.html">City chapters</a></li>
+          <li><a href="index.html#join">Founding members</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="almanack.html">The Almanack</a></li>
+          <li><a href="index.html#join">Become a member</a></li>
+          <li><a href="index.html#join">Sponsorship</a></li>
+          <li><a href="community.html">Log in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 B2B IRL. All rights reserved.</span>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>window.TICKER_ITEMS = ["B2B IRL: Toronto \u00b7 19 March 2027", "Event no. 03", "Free to attend", "Invite only \u00b7 apply for a seat", "Off the record \u00b7 operators only"];</script>
+<script src="site.js"></script>
+<script>
+/* countdown to B2B IRL: Toronto, 19 Mar 2027 (ET) */
+(function(){
+  var el = document.getElementById('countdown');
+  if(!el) return;
+  var target = new Date('2027-03-19T00:00:00-04:00').getTime();
+  var cells = {};
+  ['d','h','m','s'].forEach(function(u){ cells[u] = el.querySelector('[data-unit="' + u + '"]'); });
+  function pad(n){ return n < 10 ? '0' + n : '' + n; }
+  function tick(){
+    var left = Math.max(0, target - Date.now());
+    var s = Math.floor(left / 1000);
+    cells.d.textContent = Math.floor(s / 86400);
+    cells.h.textContent = pad(Math.floor(s % 86400 / 3600));
+    cells.m.textContent = pad(Math.floor(s % 3600 / 60));
+    cells.s.textContent = pad(s % 60);
+    if(left === 0) clearInterval(timer);
+  }
+  var timer = setInterval(tick, 1000);
+  tick();
+})();
+
+/* Toronto application: no backend yet, so it opens a pre-filled email */
+(function(){
+  var form = document.getElementById('applyForm');
+  if(!form) return;
+  var note = document.getElementById('applyNote');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var bad = null;
+    Array.prototype.forEach.call(form.querySelectorAll('input, textarea'), function(f){
+      var ok = f.checkValidity();
+      f.setAttribute('aria-invalid', ok ? 'false' : 'true');
+      if(!ok && !bad) bad = f;
+    });
+    if(bad){
+      note.className = 'form-note err';
+      note.textContent = 'A few fields need a look before you send.';
+      bad.focus();
+      return;
+    }
+    var v = function(n){ return form.elements[n].value.trim(); };
+    var tracks = Array.prototype.filter.call(form.querySelectorAll('input[name="track"]'), function(c){ return c.checked; })
+      .map(function(c){ return c.value; }).join(', ') || 'No preference';
+    var body = [
+      'Name: ' + v('name'),
+      'Email: ' + v('email'),
+      'Company: ' + v('company'),
+      'Role: ' + v('role'),
+      'LinkedIn: ' + (v('linkedin') || 'n/a'),
+      'Tracks: ' + tracks,
+      '',
+      'What I would bring to the room:',
+      v('bring')
+    ].join('\n');
+    var subject = 'Application: B2B IRL Toronto, 19 Mar (' + v('name') + ')';
+    window.location.href = 'mailto:hello@b2birl.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    note.className = 'form-note ok';
+    note.textContent = 'Your email app should open with everything filled in. Hit send to apply. Nothing opened? Email hello@b2birl.com.';
+  });
+})();
+</script>
+</body>
+</html>
