@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /foundation.html
+Disallow: /brand.html
+
+Sitemap: https://b2birl.com/sitemap.xml
