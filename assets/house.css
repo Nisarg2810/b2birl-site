@@ -159,6 +159,8 @@ textarea{ resize:vertical; min-height:80px; }
 form.inline .send{ justify-self:stretch; }
 .formnote{ text-align:center; font-size:13px; color:var(--ink-soft); grid-column:1/-1; }
 .formnote.err{ color:#A33A1E; }
+.formnote.ok{ color:var(--ink); font-family:var(--serif); font-style:italic; font-size:19px; }
+.send:disabled{ opacity:.55; cursor:default; }
 
 /* services row */
 .services{ display:grid; grid-template-columns:repeat(4, 1fr); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
