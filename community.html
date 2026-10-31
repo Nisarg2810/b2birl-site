@@ -44,7 +44,7 @@
     <a class="wordmark" href="index.html" aria-label="B2B IRL, home"><b>B2B IRL</b><span>IN REAL LIFE</span></a>
     <span class="r"><a class="cta" href="#invitation">Request access</a></span>
   </div>
-  <nav aria-label="Main"><ul class="menu label"><li><a href="meetups.html">The season</a></li><li><a href="homecoming.html">Homecoming</a></li><li><a href="community.html" aria-current="page">The Room</a></li><li><a href="newsletter.html">The letter</a></li><li><a href="podcast.html">The Tape</a></li><li><a href="almanack.html">The Almanack</a></li></ul></nav>
+  <nav aria-label="Main"><ul class="menu label"><li><a href="meetups.html">The season</a></li><li><a href="homecoming.html">Homecoming</a></li><li><a href="council.html">The Council</a></li><li><a href="community.html" aria-current="page">The Room</a></li><li><a href="live.html">The Salon</a></li><li><a href="newsletter.html">The letter</a></li><li><a href="podcast.html">The Tape</a></li></ul></nav>
 </header>
 <main id="main">
 <section class="hero page" aria-label="Two people talking by a fire pit at dusk">
@@ -75,7 +75,7 @@
           <label>Role<input name="role" data-label="Role" required autocomplete="organization-title"></label>
         </div>
         <label>LinkedIn<input name="linkedin" data-label="LinkedIn" type="url" placeholder="https://linkedin.com/in/"></label>
-        <label>What would you bring to the table?<textarea name="bring" data-label="What I would bring to the table" required></textarea></label>
+        <label>Your core area<select name="area" data-label="Your core area" required><option value="">Choose one</option><option>Positioning, messaging and GTM</option><option>Product marketing</option><option>Demand generation, ABM and pipeline</option><option>Brand, creative and storytelling</option><option>Content and SEO, including AI search</option><option>Paid acquisition</option><option>Email and lifecycle</option><option>Website and conversion</option><option>Marketing ops, attribution and analytics</option><option>Sales enablement and customer marketing</option><option>Community, events and audience</option><option>Leadership, hiring and teams</option><option>AI in the marketing workflow</option><option>Something else</option></select></label><div class="row2"><label>Company stage<select name="stage" data-label="Company stage" required><option value="">Choose one</option><option>Seed to Series A</option><option>Series B to D</option><option>Growth or public</option><option>Bootstrapped</option><option>Agency or consultancy</option></select></label><label>Team you lead<select name="team" data-label="Team you lead" required><option value="">Choose one</option><option>Just me</option><option>Two to five</option><option>Six to twenty</option><option>More than twenty</option></select></label></div><label>What would you bring to the table?<small class="hint">A campaign, a lesson, a question you are wrestling with.</small><textarea name="bring" data-label="What would you bring to the table?" required></textarea></label>
         <button class="send" type="submit">Send request</button>
         <p class="formnote">Your email app will open with your request written out. Press send to submit it.</p>
       </form>
@@ -89,15 +89,20 @@
 </div>
 </main>
 <footer>
-  <div class="fcols">
-    <div><span class="label">The house</span><ul><li><a href="index.html">B2B IRL</a></li><li><a href="community.html">The Room</a></li><li><a href="brand.html">Brand</a></li></ul></div>
-    <div><span class="label">The season</span><ul><li><a href="mumbai.html">Mumbai</a></li><li><a href="bengaluru.html">Bengaluru</a></li><li><a href="toronto.html">Toronto</a></li><li><a href="homecoming.html">Homecoming</a></li></ul></div>
-    <div><span class="label">Read &amp; listen</span><ul><li><a href="newsletter.html">The letter</a></li><li><a href="podcast.html">The Tape</a></li><li><a href="almanack.html">The Almanack</a></li></ul></div>
-    <div><span class="label">Contact</span><ul><li><a href="mailto:hello@b2birl.com">hello@b2birl.com</a></li><li><a href="mailto:hello@b2birl.com?subject=Hosting%20a%20room%20at%20B2B%20IRL">Host a room</a></li><li><a href="privacy.html">Privacy</a></li></ul></div>
+  <div class="fwrap">
+    <div class="fbrand">
+      <a class="wordmark" href="#top" aria-label="B2B IRL, back to top"><b>B2B IRL</b><span>IN REAL LIFE</span></a>
+      <p>The house for B2B marketers, in real life.</p>
+    </div>
+    <div class="fcols">
+      <div><span class="label">Read &amp; listen</span><ul><li><a href="newsletter.html">The letter</a></li><li><a href="podcast.html">The Tape</a></li><li><a href="live.html">The Salon</a></li><li><a href="almanack.html">The Almanack</a></li></ul></div>
+      <div><span class="label">Community</span><ul><li><a href="meetups.html">The season</a></li><li><a href="homecoming.html">Homecoming</a></li><li><a href="community.html">The Room</a></li><li><a href="council.html">The Council</a></li><li><a href="faculty.html">The Faculty</a></li></ul></div>
+      <div><span class="label">The house</span><ul><li><a href="membership.html">Membership</a></li><li><a href="partners.html">Host a room</a></li><li><a href="jobs.html">Openings</a></li><li><a href="mailto:hello@b2birl.com">hello@b2birl.com</a></li></ul></div>
+    </div>
   </div>
-  <div class="fmark">
-    <a class="wordmark" href="#top"><b>B2B IRL</b><span>IN REAL LIFE</span></a>
-    <small>&copy; 2026 B2B IRL</small>
+  <div class="fbase">
+    <small>&copy; 2026 B2B IRL. All rights reserved.</small>
+    <small><a href="privacy.html">Privacy</a> &middot; <a href="brand.html">Brand</a></small>
   </div>
 </footer>
 <script src="assets/house.js"></script>

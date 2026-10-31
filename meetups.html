@@ -44,7 +44,7 @@
     <a class="wordmark" href="index.html" aria-label="B2B IRL, home"><b>B2B IRL</b><span>IN REAL LIFE</span></a>
     <span class="r"><a class="cta" href="mumbai.html#invitation">Request an invitation</a></span>
   </div>
-  <nav aria-label="Main"><ul class="menu label"><li><a href="meetups.html" aria-current="page">The season</a></li><li><a href="homecoming.html">Homecoming</a></li><li><a href="community.html">The Room</a></li><li><a href="newsletter.html">The letter</a></li><li><a href="podcast.html">The Tape</a></li><li><a href="almanack.html">The Almanack</a></li></ul></nav>
+  <nav aria-label="Main"><ul class="menu label"><li><a href="meetups.html" aria-current="page">The season</a></li><li><a href="homecoming.html">Homecoming</a></li><li><a href="council.html">The Council</a></li><li><a href="community.html">The Room</a></li><li><a href="live.html">The Salon</a></li><li><a href="newsletter.html">The letter</a></li><li><a href="podcast.html">The Tape</a></li></ul></nav>
 </header>
 <main id="main">
 <section class="hero page" aria-label="Guests leaning in over a long, flower-filled dinner table">
@@ -61,12 +61,17 @@
 <article class="rv"><figure><a href="homecoming.html" tabindex="-1" aria-hidden="true"><img class="photo" src="https://images.unsplash.com/photo-1631722235421-2f4d55468fdf?auto=format&fit=crop&q=72&w=1300&h=1040" alt="Two people talking by a fire pit at dusk" loading="lazy"></a></figure>
   <div><span class="when">Once a year &middot; By invitation</span><h2>Homecoming</h2><p>Four days, somewhere remote, with the people from every room of the season.</p><a class="cta" href="homecoming.html">Discover Homecoming</a></div></article>
 </div></section>
-<section class="sec tint">
+<section class="sec tint" id="city">
   <div class="card">
+    <svg class="seal rv" viewBox="0 0 200 200" aria-hidden="true"><use href="#mark"/></svg>
     <h2 class="title rv">Your city</h2>
     <p class="display rv">Bring B2B IRL to your city.</p>
-    <p class="rv">We open new cities with a local host: someone the room already trusts. If that's you, write to us.</p>
-    <p class="rv" style="margin-top:30px"><a class="cta" href="mailto:hello@b2birl.com?subject=Hosting%20B2B%20IRL%20in%20my%20city">Propose a city</a></p>
+    <p class="rv">We open new cities with a local host: someone the room already trusts. If that's you, tell us.</p>
+    <form class="rv" data-subject="Propose a city" novalidate>
+      <div class="row2"><label>Name<input name="name" data-label="Name" type="text" required autocomplete="name"></label><label>Work email<input name="email" data-label="Work email" type="email" required autocomplete="email"></label></div><div class="row2"><label>Company<input name="company" data-label="Company" type="text" required autocomplete="organization"></label><label>Role<input name="role" data-label="Role" type="text" required autocomplete="organization-title"></label></div><label>LinkedIn<input name="linkedin" data-label="LinkedIn" type="url" placeholder="https://linkedin.com/in/"></label><div class="row2"><label>Your city<input name="city" data-label="Your city" type="text" required></label><label>Who you could gather<select name="size" data-label="Who you could gather" required><option value="">Choose one</option><option>Ten to twenty</option><option>Twenty to forty</option><option>Forty or more</option></select></label></div><label>Why your city, and why you?<small class="hint">The marketers there, the companies, and why the room would trust you.</small><textarea name="why" data-label="Why your city, and why you?" required></textarea></label>
+      <button class="send" type="submit">Propose a city</button>
+      <p class="formnote">Your email app will open with everything written out. Press send to submit it.</p>
+    </form>
   </div>
 </section>
 <div class="services">
@@ -77,15 +82,20 @@
 </div>
 </main>
 <footer>
-  <div class="fcols">
-    <div><span class="label">The house</span><ul><li><a href="index.html">B2B IRL</a></li><li><a href="community.html">The Room</a></li><li><a href="brand.html">Brand</a></li></ul></div>
-    <div><span class="label">The season</span><ul><li><a href="mumbai.html">Mumbai</a></li><li><a href="bengaluru.html">Bengaluru</a></li><li><a href="toronto.html">Toronto</a></li><li><a href="homecoming.html">Homecoming</a></li></ul></div>
-    <div><span class="label">Read &amp; listen</span><ul><li><a href="newsletter.html">The letter</a></li><li><a href="podcast.html">The Tape</a></li><li><a href="almanack.html">The Almanack</a></li></ul></div>
-    <div><span class="label">Contact</span><ul><li><a href="mailto:hello@b2birl.com">hello@b2birl.com</a></li><li><a href="mailto:hello@b2birl.com?subject=Hosting%20a%20room%20at%20B2B%20IRL">Host a room</a></li><li><a href="privacy.html">Privacy</a></li></ul></div>
+  <div class="fwrap">
+    <div class="fbrand">
+      <a class="wordmark" href="#top" aria-label="B2B IRL, back to top"><b>B2B IRL</b><span>IN REAL LIFE</span></a>
+      <p>The house for B2B marketers, in real life.</p>
+    </div>
+    <div class="fcols">
+      <div><span class="label">Read &amp; listen</span><ul><li><a href="newsletter.html">The letter</a></li><li><a href="podcast.html">The Tape</a></li><li><a href="live.html">The Salon</a></li><li><a href="almanack.html">The Almanack</a></li></ul></div>
+      <div><span class="label">Community</span><ul><li><a href="meetups.html">The season</a></li><li><a href="homecoming.html">Homecoming</a></li><li><a href="community.html">The Room</a></li><li><a href="council.html">The Council</a></li><li><a href="faculty.html">The Faculty</a></li></ul></div>
+      <div><span class="label">The house</span><ul><li><a href="membership.html">Membership</a></li><li><a href="partners.html">Host a room</a></li><li><a href="jobs.html">Openings</a></li><li><a href="mailto:hello@b2birl.com">hello@b2birl.com</a></li></ul></div>
+    </div>
   </div>
-  <div class="fmark">
-    <a class="wordmark" href="#top"><b>B2B IRL</b><span>IN REAL LIFE</span></a>
-    <small>&copy; 2026 B2B IRL</small>
+  <div class="fbase">
+    <small>&copy; 2026 B2B IRL. All rights reserved.</small>
+    <small><a href="privacy.html">Privacy</a> &middot; <a href="brand.html">Brand</a></small>
   </div>
 </footer>
 <script src="assets/house.js"></script>

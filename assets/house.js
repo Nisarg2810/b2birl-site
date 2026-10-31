@@ -61,7 +61,7 @@
     form.addEventListener('submit', function(e){
       e.preventDefault();
       var bad = null, lines = [];
-      [].forEach.call(form.querySelectorAll('input, textarea'), function(f){
+      [].forEach.call(form.querySelectorAll('input, textarea, select'), function(f){
         var ok = f.checkValidity();
         f.setAttribute('aria-invalid', ok ? 'false' : 'true');
         if(!ok && !bad) bad = f;
